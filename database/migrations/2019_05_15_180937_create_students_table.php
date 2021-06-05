@@ -19,7 +19,6 @@ class CreateStudentsTable extends Migration
             $table->unsignedBigInteger('parent_id');
             $table->unsignedBigInteger('class_id');
             $table->unsignedBigInteger('roll_number');
-            $table->unsignedBigInteger('evaluation');
             $table->enum('gender', ['male', 'female', 'other']);
             $table->string('phone');
             $table->date('dateofbirth');
@@ -27,6 +26,7 @@ class CreateStudentsTable extends Migration
             $table->string('permanent_address');
             $table->string('paid');
             $table->timestamps();
+            $table->unsignedBigInteger('evaluation');
         });
     }
 

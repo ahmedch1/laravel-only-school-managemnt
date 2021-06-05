@@ -4,7 +4,7 @@
     <div class="roles-permissions">
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Programmes</h2>
+                <h2 class="text-gray-700 uppercase font-bold">Classes</h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('classes.create') }}" class="bg-gray-200 text-gray-700 text-sm uppercase py-2 px-4 flex items-center rounded">

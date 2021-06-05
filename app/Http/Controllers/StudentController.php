@@ -35,54 +35,52 @@ class StudentController extends Controller
         $classes = Grade::latest()->get();
         $parents = Parents::with('user')->latest()->get();
 
-        return view('backend.students.create', compact('classes', 'parents'));
+        return view('backend.students.create', compact('classes','parents'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8',
-            'parent_id' => 'required|numeric',
-            'class_id' => 'required|numeric',
-            'roll_number' => [
+            'name'              => 'required|string|max:255',
+            'email'             => 'required|string|email|max:255|unique:users',
+            'password'          => 'required|string|min:8',
+            'parent_id'         => 'required|numeric',
+            'class_id'          => 'required|numeric',
+            'roll_number'       => [
                 'required',
                 'numeric',
                 Rule::unique('students')->where(function ($query) use ($request) {
                     return $query->where('class_id', $request->class_id);
                 })
             ],
-            'evaluation' => [
-                'required',
+            'evaluation'       => [
                 'numeric',
                 Rule::unique('students')->where(function ($query) use ($request) {
                     return $query->where('class_id', $request->class_id);
                 })
             ],
-            'gender' => 'required|string',
-            'phone' => 'required|string|max:255',
-            'dateofbirth' => 'required|date',
-            'current_address' => 'required|string|max:255',
-            'paid' => 'required|string|max:255',
+            'gender'            => 'required|string',
+            'phone'             => 'required|string|max:255',
+            'dateofbirth'       => 'required|date',
+            'current_address'   => 'required|string|max:255',
             'permanent_address' => 'required|string|max:255',
-            'paid' => 'required|string|max:255'
+            'paid'=>'required|string|max:255'
         ]);
 
         $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'name'              => $request->name,
+            'email'             => $request->email,
+            'password'          => Hash::make($request->password)
         ]);
 
         if ($request->hasFile('profile_picture')) {
-            $profile = Str::slug($user->name) . '-' . $user->id . '.' . $request->profile_picture->getClientOriginalExtension();
+            $profile = Str::slug($user->name).'-'.$user->id.'.'.$request->profile_picture->getClientOriginalExtension();
             $request->profile_picture->move(public_path('images/profile'), $profile);
         } else {
             $profile = 'avatar.png';
@@ -92,16 +90,16 @@ class StudentController extends Controller
         ]);
 
         $user->student()->create([
-            'parent_id' => $request->parent_id,
-            'class_id' => $request->class_id,
-            'roll_number' => $request->roll_number,
-            'evaluation' => $request->evaluation,
-            'gender' => $request->gender,
-            'phone' => $request->phone,
-            'dateofbirth' => $request->dateofbirth,
-            'current_address' => $request->current_address,
-            'paid' => $request->paid,
-            'permanent_address' => $request->permanent_address
+            'parent_id'         => $request->parent_id,
+            'class_id'          => $request->class_id,
+            'roll_number'       => $request->roll_number,
+            'gender'            => $request->gender,
+            'phone'             => $request->phone,
+            'dateofbirth'       => $request->dateofbirth,
+            'current_address'   => $request->current_address,
+            'permanent_address' => $request->permanent_address,
+            'evaluation'=>$request->evaluation,
+            'paid'=>$request->paid
         ]);
 
         $user->assignRole('Student');
@@ -112,20 +110,20 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param \App\Student $student
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
     public function show(Student $student)
     {
         $class = Grade::with('subjects')->where('id', $student->class_id)->first();
 
-        return view('backend.students.show', compact('class', 'student'));
+        return view('backend.students.show', compact('class','student'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Student $student
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
     public function edit(Student $student)
@@ -133,13 +131,13 @@ class StudentController extends Controller
         $classes = Grade::latest()->get();
         $parents = Parents::with('user')->latest()->get();
 
-        return view('backend.students.edit', compact('classes', 'parents', 'student'));
+        return view('backend.students.edit', compact('classes','parents','student'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Student $student
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
     public function contact(Student $student)
@@ -147,69 +145,69 @@ class StudentController extends Controller
         $classes = Grade::latest()->get();
         $parents = Parents::with('user')->latest()->get();
 
-        return view('backend.students.contact', compact('classes', 'parents', 'student'));
+        return view('backend.students.contact', compact('classes','parents','student'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Student $student
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Student $student)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users,email,' . $student->user_id,
-            'parent_id' => 'required|numeric',
-            'class_id' => 'required|numeric',
-            'roll_number' => [
+            'name'              => 'required|string|max:255',
+            'email'             => 'required|string|email|max:255|unique:users,email,'.$student->user_id,
+            'parent_id'         => 'required|numeric',
+            'class_id'          => 'required|numeric',
+            'roll_number'       => [
                 'required',
                 'numeric',
                 Rule::unique('students')->ignore($student->id)->where(function ($query) use ($request) {
                     return $query->where('class_id', $request->class_id);
                 })
             ],
-            'evaluation' => [
+            'evaluation'       => [
                 'required',
                 'numeric',
                 Rule::unique('students')->ignore($student->id)->where(function ($query) use ($request) {
                     return $query->where('class_id', $request->class_id);
                 })
             ],
-            'gender' => 'required|string',
-            'phone' => 'required|string|max:255',
-            'dateofbirth' => 'required|date',
-            'current_address' => 'required|string|max:255',
-            'paid' => 'required|string|max:255',
-            'permanent_address' => 'required|string|max:255'
+            'gender'            => 'required|string',
+            'phone'             => 'required|string|max:255',
+            'dateofbirth'       => 'required|date',
+            'current_address'   => 'required|string|max:255',
+            'permanent_address' => 'required|string|max:255',
+            'paid'=>'required|string|max:255'
         ]);
 
         if ($request->hasFile('profile_picture')) {
-            $profile = Str::slug($student->user->name) . '-' . $student->user->id . '.' . $request->profile_picture->getClientOriginalExtension();
+            $profile = Str::slug($student->user->name).'-'.$student->user->id.'.'.$request->profile_picture->getClientOriginalExtension();
             $request->profile_picture->move(public_path('images/profile'), $profile);
         } else {
             $profile = $student->user->profile_picture;
         }
 
         $student->user()->update([
-            'name' => $request->name,
-            'email' => $request->email,
-            'profile_picture' => $profile
+            'name'              => $request->name,
+            'email'             => $request->email,
+            'profile_picture'   => $profile
         ]);
 
         $student->update([
-            'parent_id' => $request->parent_id,
-            'class_id' => $request->class_id,
-            'roll_number' => $request->roll_number,
-            'evaluation' => $request->evaluation,
-            'gender' => $request->gender,
-            'phone' => $request->phone,
-            'dateofbirth' => $request->dateofbirth,
-            'current_address' => $request->current_address,
-            'paid' => $request->paid,
-            'permanent_address' => $request->permanent_address
+            'parent_id'         => $request->parent_id,
+            'class_id'          => $request->class_id,
+            'roll_number'       => $request->roll_number,
+            'gender'            => $request->gender,
+            'phone'             => $request->phone,
+            'dateofbirth'       => $request->dateofbirth,
+            'current_address'   => $request->current_address,
+            'paid'=>$request->paid,
+            'permanent_address' => $request->permanent_address,
+            'evaluation'=>$request->evaluation
         ]);
 
         return redirect()->route('student.index');
@@ -218,7 +216,7 @@ class StudentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Student $student
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
     public function destroy(Student $student)
@@ -228,7 +226,7 @@ class StudentController extends Controller
         $user->removeRole('Student');
 
         if ($user->delete()) {
-            if ($user->profile_picture != 'avatar.png') {
+            if($user->profile_picture != 'avatar.png') {
                 $image_path = public_path() . '/images/profile/' . $user->profile_picture;
                 if (is_file($image_path) && file_exists($image_path)) {
                     unlink($image_path);

@@ -45,7 +45,7 @@ class DatabaseSeeder extends Seeder
             'name'          => 'Student',
             'email'         => 'student@demo.com',
             'password'      => bcrypt('12345678'),
-            'created_at'    => date("Y-m-d H:i:s")
+            'created_at'    => date("Y-m-d H:i:s"),
         ]);
         $user4->assignRole('Student');
 
@@ -87,14 +87,14 @@ class DatabaseSeeder extends Seeder
                 'parent_id'         => 1,
                 'class_id'          => 1,
                 'roll_number'       => 1,
-                'evaluation'=>1,
                 'gender'            => 'male',
                 'phone'             => '0123456789',
                 'dateofbirth'       => '1993-04-11',
                 'current_address'   => 'Dhaka-1215',
                 'paid'=>'paid',
                 'permanent_address' => 'Dhaka-1215',
-                'created_at'        => date("Y-m-d H:i:s")
+                'created_at'        => date("Y-m-d H:i:s"),
+                'evaluation'=>1
             ]
         ]);
 

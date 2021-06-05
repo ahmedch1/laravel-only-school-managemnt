@@ -49,6 +49,11 @@
                         <div class="w-1/2 text-sm text-left ml-2">{{ $children->current_address }}</div>
                     </div>
 
+                    <div class="flex items-center justify-between">
+                        <div class="w-1/2 text-sm text-right">Paié :</div>
+                        <div class="w-1/2 text-sm text-left ml-2">{{ $children->paid }}</div>
+                    </div>
+
                     <div class="mt-6">
                         <a href="{{ route('attendance.show',$children->id) }}"
                            class="bg-gray-100 inline-block mb-4 text-xs text-gray-600 uppercase font-semibold px-4 py-2 border border-gray-400 rounded">Présence</a>
