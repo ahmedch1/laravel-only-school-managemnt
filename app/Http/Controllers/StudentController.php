@@ -135,17 +135,16 @@ class StudentController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Display the specified resource.
      *
      * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
     public function contact(Student $student)
     {
-        $classes = Grade::latest()->get();
-        $parents = Parents::with('user')->latest()->get();
+        $class = Grade::with('subjects')->where('id', $student->class_id)->first();
 
-        return view('backend.students.contact', compact('classes','parents','student'));
+        return view('backend.students.contact', compact('class','student'));
     }
 
     /**
