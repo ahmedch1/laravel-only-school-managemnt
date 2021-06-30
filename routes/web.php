@@ -63,6 +63,8 @@ Route::group(['middleware' => ['auth','role:Admin']], function ()
 Route::group(['middleware' => ['auth','role:Teacher']], function ()
 {
     Route::resource('notes','NoteController');
+    Route::resource('trims','TrimesterController');
+    Route::resource('hebdos','HebdomadaireController');
     Route::post('attendance', 'AttendanceController@store')->name('teacher.attendance.store');
     Route::get('attendance-create/{classid}', 'AttendanceController@createByTeacher')->name('teacher.attendance.create');
 

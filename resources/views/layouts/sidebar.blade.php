@@ -131,7 +131,7 @@
             </svg>
             <span class="ml-2 text-sm font-semibold">notes</span>
         </a>
-        <a href="{{ route('subject.index') }}" class="flex items-center text-gray-600 py-2 hover:text-blue-700">
+        <a href="{{ route('trims.index') }}" class="flex items-center text-gray-600 py-2 hover:text-blue-700">
             <svg class="h-4 w-4 fill-current" aria-hidden="true" focusable="false" data-prefix="fas"
                  data-icon="align-right" class="svg-inline--fa fa-align-right fa-w-14" role="img"
                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -140,7 +140,7 @@
             </svg>
             <span class="ml-2 text-sm font-semibold">Programme Trimestriel</span>
         </a>
-        <a href="{{ route('subject.index') }}" class="flex items-center text-gray-600 py-2 hover:text-blue-700">
+        <a href="{{ route('hebdos.index') }}" class="flex items-center text-gray-600 py-2 hover:text-blue-700">
             <svg class="h-4 w-4 fill-current" aria-hidden="true" focusable="false" data-prefix="fas"
                  data-icon="align-right" class="svg-inline--fa fa-align-right fa-w-14" role="img"
                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
