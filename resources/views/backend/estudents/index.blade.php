@@ -6,7 +6,7 @@
             <div>
                 <h2 class="text-gray-700 uppercase font-bold">Etudiants</h2>
             </div>
-            
+
         </div>
         <div class="mt-8 bg-white rounded border-b-4 border-gray-300">
             <div
@@ -16,7 +16,7 @@
                 <div class="w-2/12 px-4 py-3">Classe</div>
                 <div class="w-2/12 px-4 py-3">Téléphone</div>
                 <div class="w-2/12 px-4 py-3">evaluation </div>
-                <div class="w-2/12 px-4 py-3 text-right">Action</div>
+                <div class="w-2/12 px-4 py-3">note </div>
             </div>
             @foreach ($students as $student)
                 <div class="flex flex-wrap items-center text-gray-700 border-t-2 border-l-4 border-r-4 border-gray-300">
@@ -29,7 +29,10 @@
                     <div
                         class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $student->phone }}</div>
                     <div
-                        class="d-flex flex-row w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight text-center">{{ $student->evaluation }}   
+                        class="d-flex flex-row w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight text-center">{{ $student->evaluation }}
+                    </div>
+                    <div
+                        class="d-flex flex-row w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight text-center">{{ $student->note }}
                     </div>
 
                     <div class="w-2/12 flex items-center justify-end px-3">

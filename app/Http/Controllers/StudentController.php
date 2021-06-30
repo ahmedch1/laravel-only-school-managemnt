@@ -196,7 +196,8 @@ class StudentController extends Controller
             'dateofbirth'       => 'required|date',
             'current_address'   => 'required|string|max:255',
             'permanent_address' => 'required|string|max:255',
-            'paid'=>'required|string|max:255'
+            'paid'=>'required|string|max:255',
+            'note'=>'string'
         ]);
 
         if ($request->hasFile('profile_picture')) {
@@ -222,7 +223,8 @@ class StudentController extends Controller
             'current_address'   => $request->current_address,
             'paid'=>$request->paid,
             'permanent_address' => $request->permanent_address,
-            'evaluation'=>$request->evaluation
+            'evaluation'=>$request->evaluation,
+            'note'=>$request->note
         ]);
 
         return redirect()->route('student.index');
@@ -254,7 +256,8 @@ class StudentController extends Controller
             'dateofbirth'       => 'required|date',
             'current_address'   => 'required|string|max:255',
             'permanent_address' => 'required|string|max:255',
-            'paid'=>'required|string|max:255'
+            'paid'=>'required|string|max:255',
+            'note'=>'string'
         ]);
 
         if ($request->hasFile('profile_picture')) {
@@ -280,7 +283,8 @@ class StudentController extends Controller
             'current_address'   => $request->current_address,
             'paid'=>$request->paid,
             'permanent_address' => $request->permanent_address,
-            'evaluation'=>$request->evaluation
+            'evaluation'=>$request->evaluation,
+            'note'=>$request->note
         ]);
 
         return redirect()->route('student.index');

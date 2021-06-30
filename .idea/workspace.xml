@@ -27,7 +27,10 @@
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TrimesterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TrimesterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/estudents/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/estudents/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/estudents/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/estudents/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/hebdos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/student.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/student.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -209,7 +212,7 @@
       <workItem from="1624993188579" duration="3860000" />
       <workItem from="1625002474479" duration="14943000" />
       <workItem from="1625041617601" duration="19620000" />
-      <workItem from="1625074644367" duration="6637000" />
+      <workItem from="1625074644367" duration="9405000" />
     </task>
     <servers />
   </component>
@@ -274,11 +277,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="613" y="312" width="932" height="892" key="dock-window-1/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622911143353" />
-    <state x="1146" y="273" width="701" height="534" key="find.popup" timestamp="1625082647729">
+    <state x="1146" y="273" width="701" height="534" key="find.popup" timestamp="1625089960989">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="783" y="300" width="701" height="624" key="find.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622913669596" />
-    <state x="1146" y="273" width="701" height="534" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625082647729" />
+    <state x="1146" y="273" width="701" height="534" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625089960989" />
     <state x="1316" y="283" key="ftp.server.browser" timestamp="1624734850276">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -287,10 +290,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1095" y="254" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625065512777" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625085000430">
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625089966906">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622912758733" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625085000430" />
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625089966906" />
   </component>
 </project>
