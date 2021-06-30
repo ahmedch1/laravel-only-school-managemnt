@@ -4,7 +4,7 @@
     <div class="roles-permissions">
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Emplois</h2>
+                <h2 class="text-gray-700 uppercase font-bold">Notes</h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('notes.create') }}"
