@@ -30,6 +30,7 @@
       <change beforePath="$PROJECT_DIR$/resources/views/backend/estudents/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/estudents/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/estudents/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/estudents/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/hebdos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/parents.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/parents.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/student.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/student.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -212,7 +213,7 @@
       <workItem from="1624993188579" duration="3860000" />
       <workItem from="1625002474479" duration="14943000" />
       <workItem from="1625041617601" duration="19620000" />
-      <workItem from="1625074644367" duration="9405000" />
+      <workItem from="1625074644367" duration="9746000" />
     </task>
     <servers />
   </component>
@@ -290,10 +291,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1095" y="254" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625065512777" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625089966906">
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625090418954">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622912758733" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625089966906" />
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625090418954" />
   </component>
 </project>

@@ -33,6 +33,10 @@
                         <div class="w-1/2 text-sm text-left ml-2">{{ $children->evaluation }}</div>
                     </div>
                     <div class="flex items-center justify-between">
+                        <div class="w-1/2 text-sm text-right">Note :</div>
+                        <div class="w-1/2 text-sm text-left ml-2">{{ $children->note }}</div>
+                    </div>
+                    <div class="flex items-center justify-between">
                         <div class="w-1/2 text-sm text-right">Téléphone :</div>
                         <div class="w-1/2 text-sm text-left ml-2">{{ $children->phone }}</div>
                     </div>
