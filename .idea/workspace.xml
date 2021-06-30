@@ -20,27 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="959c12f1-e8ec-4f3e-ab3f-be1c49d28230" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Hebdo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HebdomadaireController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TrimesterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Trim.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_30_135825_create_trims_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_30_140045_create_hebdos_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Files/ProgramTrim/trimester-1-.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Files/ProgramTrim/trimester-1-1.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/indexparent.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/indexparent.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NoteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NoteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/parents/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/parents/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/students/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/students/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/teachers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/teachers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HebdomadaireController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HebdomadaireController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TrimesterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TrimesterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/hebdos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -174,7 +161,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/students" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -186,11 +173,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projet7899\laravel-only-school-managemnt\app" />
       <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\students" />
+      <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\hebdos" />
+      <recent name="D:\projet7899\laravel-only-school-managemnt\app" />
       <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\attendance" />
       <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\payment" />
-      <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\actualite" />
     </key>
   </component>
   <component name="RunManager">
@@ -221,7 +208,8 @@
       <workItem from="1624962796689" duration="4011000" />
       <workItem from="1624993188579" duration="3860000" />
       <workItem from="1625002474479" duration="14943000" />
-      <workItem from="1625041617601" duration="18968000" />
+      <workItem from="1625041617601" duration="19620000" />
+      <workItem from="1625074644367" duration="5862000" />
     </task>
     <servers />
   </component>
@@ -286,11 +274,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="613" y="312" width="932" height="892" key="dock-window-1/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622911143353" />
-    <state x="1146" y="273" width="701" height="534" key="find.popup" timestamp="1625062300824">
+    <state x="1146" y="273" width="701" height="534" key="find.popup" timestamp="1625082647729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="783" y="300" width="701" height="624" key="find.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622913669596" />
-    <state x="1146" y="273" width="701" height="534" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625062300824" />
+    <state x="1146" y="273" width="701" height="534" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625082647729" />
     <state x="1316" y="283" key="ftp.server.browser" timestamp="1624734850276">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -299,10 +287,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1095" y="254" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625065512777" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625073748985">
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625085000430">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622912758733" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625073748985" />
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625085000430" />
   </component>
 </project>

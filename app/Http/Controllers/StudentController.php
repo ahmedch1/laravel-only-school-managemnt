@@ -25,6 +25,8 @@ class StudentController extends Controller
         return view('backend.students.index', compact('students'));
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -119,6 +121,7 @@ class StudentController extends Controller
 
         return view('backend.students.show', compact('class','student'));
     }
+
 
     /**
      * Show the form for editing the specified resource.

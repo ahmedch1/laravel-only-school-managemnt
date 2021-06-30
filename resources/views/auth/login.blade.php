@@ -412,14 +412,14 @@
             <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
 
                 <div class="fcf-form-group">
-                    <label for="Name" class="fcf-label">Your name</label>
+                    <label for="Name" class="fcf-label">Votre nom</label>
                     <div class="fcf-input-group">
                         <input type="text" id="Name" name="Name" class="fcf-form-control" required>
                     </div>
                 </div>
 
                 <div class="fcf-form-group">
-                    <label for="Email" class="fcf-label">Your email address</label>
+                    <label for="Email" class="fcf-label">Votre adresse email</label>
                     <div class="fcf-input-group">
                         <input type="email" id="Email" name="Email" class="fcf-form-control" required>
                     </div>

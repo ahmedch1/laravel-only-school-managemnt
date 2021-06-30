@@ -23,6 +23,19 @@ class HebdomadaireController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function indexparent()
+    {
+        $hebdos = Hebdo::latest()->paginate(5);
+        return view('backend.hebdos.indexparent', compact('hebdos'));
+
+        //
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -48,7 +61,7 @@ class HebdomadaireController extends Controller
 
         $hebdo = new Hebdo();
         $hebdo->name = $request->input('name');
-        
+
         $hebdo->description = $request->input('description');
         if ($request->hasFile('link')) {
             $file = Str::slug($hebdo->name) . '-' . $hebdo->id . '.' . $request->link->getClientOriginalExtension();
@@ -70,7 +83,7 @@ class HebdomadaireController extends Controller
      * @param \App\Emploi $emploi
      * @return \Illuminate\Http\Response
      */
-    public function show(Hebdo $trim)
+    public function show(Hebdo $hebdo)
     {
         return view('backend.hebdos.show', compact('hebdo'));
     }
@@ -110,7 +123,7 @@ class HebdomadaireController extends Controller
         }
         if($request->hasFile('link')){
             $hebdo->link = $file;
-        } 
+        }
         $hebdo->save();
 
         return redirect()->route('hebdos.index')

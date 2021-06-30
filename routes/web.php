@@ -83,6 +83,11 @@ Route::group(['middleware' => ['auth','role:Teacher']], function ()
 
 Route::group(['middleware' => ['auth', 'role:Parent']], function () {
     Route::get('attendance/{attendance}', 'AttendanceController@show')->name('attendance.show');
+    Route::resource('trims','TrimesterController');
+    Route::get('/trimsindexparent', 'TrimesterController@indexparent')->name('trims.indexparent');
+    Route::get('hebdoindexparent', 'HebdomadaireController@indexparent')->name('hebdos.indexparent');
+    Route::resource('hebdos','HebdomadaireController');
+    Route::resource('student','StudentController');
 });
 
 Route::group(['middleware' => ['auth', 'role:Student']], function () {

@@ -5,7 +5,7 @@
 
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Détails de Programme Trimestriel</h2>
+                <h2 class="text-gray-700 uppercase font-bold">Détails de Programme hebdomadaire</h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('trims.index') }}" class="bg-gray-200 text-gray-700 text-sm uppercase py-2 px-4 flex items-center rounded">
@@ -24,7 +24,7 @@
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <span class="block text-gray-600 font-bold">{{ $trim->name }}</span>
+                        <span class="block text-gray-600 font-bold">{{ $hebdo->name }}</span>
                     </div>
                 </div>
                 <div class="md:flex md:items-center mb-6">
@@ -34,7 +34,7 @@
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <span class="text-gray-600 font-bold">{{ $trim->link }}</span>
+                        <span class="text-gray-600 font-bold">{{ $hebdo->link }}</span>
                     </div>
                 </div>
                 <div class="md:flex md:items-center mb-6">
@@ -44,7 +44,7 @@
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <span class="text-gray-600 font-bold">{{ $trim->description }}</span>
+                        <span class="text-gray-600 font-bold">{{ $hebdo->description }}</span>
                     </div>
                 </div>
 

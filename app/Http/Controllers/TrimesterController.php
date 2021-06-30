@@ -23,6 +23,19 @@ class TrimesterController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function indexparent()
+    {
+        $trims = Trim::latest()->paginate(5);
+        return view('backend.trims.indexparent', compact('trims'));
+
+        //
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -48,7 +61,7 @@ class TrimesterController extends Controller
 
         $trim = new Trim();
         $trim->name = $request->input('name');
-        
+
         $trim->description = $request->input('description');
         if ($request->hasFile('link')) {
             $file = Str::slug($trim->name) . '-' . $trim->id . '.' . $request->link->getClientOriginalExtension();
@@ -110,7 +123,7 @@ class TrimesterController extends Controller
         }
         if($request->hasFile('link')){
             $trim->link = $file;
-        } 
+        }
         $trim->save();
 
         return redirect()->route('trims.index')
