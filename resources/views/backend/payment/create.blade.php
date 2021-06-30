@@ -5,7 +5,7 @@
 
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Créer Actualité</h2>
+                <h2 class="text-gray-700 uppercase font-bold">Créer Paiement</h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('payment.index') }}"
@@ -27,7 +27,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Nom de lpayment
+                            Motif du paiement
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -42,14 +42,14 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                           Description de payment
+                           Prix de paiement
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <input name="description"
+                        <input name="amount"
                                class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
-                               type="text" value="{{ old('description') }}">
-                        @error('description')
+                               type="text" value="{{ old('amount') }}">
+                        @error('amount')
                         <p class="text-red-500 text-xs italic">{{ $message }}</p>
                         @enderror
                     </div>
@@ -57,14 +57,14 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                           Slug
+                           Description de paiement
                         </label>
                     </div>
                     <div class="md:w-2/3">
                         <input name="description"
                                class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
-                               type="text" value="{{ old('slug') }}">
-                        @error('slug')
+                               type="text" value="{{ old('description') }}">
+                        @error('description')
                         <p class="text-red-500 text-xs italic">{{ $message }}</p>
                         @enderror
                     </div>

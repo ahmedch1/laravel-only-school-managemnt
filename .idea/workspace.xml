@@ -20,18 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="959c12f1-e8ec-4f3e-ab3f-be1c49d28230" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Payment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/emplois/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/emplois/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/emplois/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/emplois/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/payment/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/payment/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/payment/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/attendance/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/attendance/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/payment/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/payment/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/payment/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/payment/edit.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +198,7 @@
       <workItem from="1624901698308" duration="8333000" />
       <workItem from="1624962796689" duration="4011000" />
       <workItem from="1624993188579" duration="3860000" />
-      <workItem from="1625002474479" duration="10737000" />
+      <workItem from="1625002474479" duration="12335000" />
     </task>
     <servers />
   </component>
@@ -276,10 +268,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1095" y="254" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625003555570" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625014864611">
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625016479653">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622912758733" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625014864611" />
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625016479653" />
   </component>
 </project>

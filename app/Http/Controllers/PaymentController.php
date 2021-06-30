@@ -18,6 +18,7 @@ class PaymentController extends Controller
 
         return view('backend.payment.index', compact('payment'));
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -37,7 +38,6 @@ class PaymentController extends Controller
      */
     public function edit(Payment $payment)
     {
-        $payment = Payment::latest()->get();
         return view('backend.payment.edit', compact('payment'));
     }
 
@@ -53,11 +53,15 @@ class PaymentController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'amount'=>'required',
+            'description'=>'required'
 
         ]);
 
         $payment->update([
             'name' => $request->name,
+            'amount'=>$request->amount,
+            'description'=>$request->description
         ]);
 
         return redirect()->route('payment.index');
@@ -74,15 +78,13 @@ class PaymentController extends Controller
         $request->validate([
             'name' => 'required|string|max:255|unique:subjects',
             'description' => 'required|string|max:255',
-            'slug'=>'string'
+            'slug' => 'string'
         ]);
 
         Payment::create([
             'name' => $request->name,
             'description' => $request->description,
-            'slug'=>'ddd',
-            'actualite_code'=>'3',
-            'amount'=>'5'
+            'amount' => $request->amount
         ]);
 
         return redirect()->route('payment.index');
