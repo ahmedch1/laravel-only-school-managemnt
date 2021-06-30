@@ -59,7 +59,11 @@ Route::group(['middleware' => ['auth', 'role:Admin']], function () {
 
 });
 
-Route::group(['middleware' => ['auth', 'role:Teacher']], function () {
+Route::group(['middleware' => ['auth','role:Teacher']], function ()
+{
+    Route::resource('notes','NoteController');
+    Route::resource('programmetrimestriel','ProgrammetrimestrielController');
+    Route::resource('programmehebdomadaire','ProgrammehebdomadaireController');
     Route::post('attendance', 'AttendanceController@store')->name('teacher.attendance.store');
     Route::get('attendance-create/{classid}', 'AttendanceController@createByTeacher')->name('teacher.attendance.create');
     Route::get('attendance-createa/{classid}', 'AttendanceController@createaByTeacher')->name('teacher.attendance.createa');

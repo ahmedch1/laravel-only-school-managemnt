@@ -20,18 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="959c12f1-e8ec-4f3e-ab3f-be1c49d28230" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/attendance/createa.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/students/editea.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/NoteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProgrammetrimestrielController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Note.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Programmetrimestriel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_30_111521_create_notes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/notes/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/notes/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/notes/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/notes/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/programmetrimestriel/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Attendance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Attendance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_15_180937_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_15_180937_create_students_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_17_133226_create_attendances_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_17_133226_create_attendances_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/attendance/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/attendance/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +167,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/students" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -176,6 +179,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projet7899\laravel-only-school-managemnt\app" />
       <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\students" />
       <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\attendance" />
       <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\payment" />
@@ -210,7 +214,7 @@
       <workItem from="1624962796689" duration="4011000" />
       <workItem from="1624993188579" duration="3860000" />
       <workItem from="1625002474479" duration="14943000" />
-      <workItem from="1625041617601" duration="12618000" />
+      <workItem from="1625041617601" duration="18566000" />
     </task>
     <servers />
   </component>
@@ -267,23 +271,23 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="613" y="312" width="932" height="892" key="dock-window-1/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622911143353" />
-    <state x="1146" y="273" width="701" height="534" key="find.popup" timestamp="1625042824761">
+    <state x="1146" y="273" width="701" height="534" key="find.popup" timestamp="1625062300824">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="783" y="300" width="701" height="624" key="find.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622913669596" />
-    <state x="1146" y="273" width="701" height="534" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625042824761" />
+    <state x="1146" y="273" width="701" height="534" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625062300824" />
     <state x="1316" y="283" key="ftp.server.browser" timestamp="1624734850276">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1316" y="283" key="ftp.server.browser/0.0.1920.1080@0.0.1920.1080" timestamp="1624734850276" />
-    <state x="1095" y="254" key="run.anything.popup" timestamp="1625003555570">
+    <state x="1095" y="254" key="run.anything.popup" timestamp="1625065512777">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1095" y="254" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625003555570" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625055278406">
+    <state x="1095" y="254" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625065512777" />
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625072276479">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622912758733" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625055278406" />
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625072276479" />
   </component>
 </project>
