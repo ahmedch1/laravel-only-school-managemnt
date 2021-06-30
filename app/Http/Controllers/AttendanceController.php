@@ -18,31 +18,31 @@ class AttendanceController extends Controller
     public function index()
     {
         $months = Attendance::select('attendence_date')
-                            ->orderBy('attendence_date')
-                            ->get()
-                            ->groupBy(function ($val) {
-                                return Carbon::parse($val->attendence_date)->format('m');
-                            });
+            ->orderBy('attendence_date')
+            ->get()
+            ->groupBy(function ($val) {
+                return Carbon::parse($val->attendence_date)->format('m');
+            });
 
-        if( request()->has(['type', 'month']) ) {
+        if (request()->has(['type', 'month'])) {
             $type = request()->input('type');
             $month = request()->input('month');
 
-            if($type == 'class') {
+            if ($type == 'class') {
                 $attendances = Attendance::whereMonth('attendence_date', $month)
-                                     ->select('attendence_date','student_id','attendence_status','class_id')
-                                     ->orderBy('class_id','asc')
-                                     ->get()
-                                     ->groupBy(['class_id','attendence_date']);
+                    ->select('attendence_date', 'student_id', 'attendence_status', 'class_id')
+                    ->orderBy('class_id', 'asc')
+                    ->get()
+                    ->groupBy(['class_id', 'attendence_date']);
 
-                return view('backend.attendance.index', compact('attendances','months'));
+                return view('backend.attendance.index', compact('attendances', 'months'));
 
             }
 
         }
         $attendances = [];
 
-        return view('backend.attendance.index', compact('attendances','months'));
+        return view('backend.attendance.index', compact('attendances', 'months'));
     }
 
     /**
@@ -55,61 +55,107 @@ class AttendanceController extends Controller
 
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function createa()
+    {
+
+    }
+
     public function createByTeacher($classid)
     {
-        $class = Grade::with(['students','subjects','teacher'])->findOrFail($classid);
+        $class = Grade::with(['students', 'subjects', 'teacher'])->findOrFail($classid);
 
         return view('backend.attendance.create', compact('class'));
+    }
+    public function createaByTeacher($classid)
+    {
+        $class = Grade::with(['students', 'subjects', 'teacher'])->findOrFail($classid);
+
+        return view('backend.attendance.createa', compact('class'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $classid    = $request->class_id;
+        $classid = $request->class_id;
         $attenddate = date('Y-m-d');
 
         $teacher = Teacher::findOrFail(auth()->user()->teacher->id);
-        $class   = Grade::find($classid);
+        $class = Grade::find($classid);
 
-        if($teacher->id !== $class->teacher_id) {
-            return redirect()->route('teacher.attendance.create',$classid)
-                             ->with('status', 'You are not assign for this class attendence!');
+        if ($teacher->id !== $class->teacher_id) {
+            return redirect()->route('teacher.attendance.create', $classid)
+                ->with('status', 'You are not assign for this class attendence!');
         }
 
-        $dataexist = Attendance::whereDate('attendence_date',$attenddate)
-                                ->where('class_id',$classid)
-                                ->get();
-
-        if (count($dataexist) !== 0 ) {
-            return redirect()->route('teacher.attendance.create',$classid)
-                             ->with('status', 'Attendance already taken!');
-        }
 
         $request->validate([
-            'class_id'      => 'required|numeric',
-            'teacher_id'    => 'required|numeric',
-            'attendences'   => 'required'
+            'class_id' => 'required|numeric',
+            'teacher_id' => 'required|numeric',
+            'attendences' => 'required',
+            'note'=>'5',
+            'evaluation'=>'5'
         ]);
 
         foreach ($request->attendences as $studentid => $attendence) {
 
-            if( $attendence == 'present' ) {
+            if ($attendence == 'present') {
                 $attendence_status = true;
-            } else if( $attendence == 'absent' ){
+            } else if ($attendence == 'absent') {
                 $attendence_status = false;
             }
 
             Attendance::create([
-                'class_id'          => $request->class_id,
-                'teacher_id'        => $request->teacher_id,
-                'student_id'        => $studentid,
-                'attendence_date'   => $attenddate,
-                'attendence_status' => $attendence_status
+                'class_id' => $request->class_id,
+                'teacher_id' => $request->teacher_id,
+                'student_id' => $studentid,
+                'attendence_date' => $attenddate,
+                'attendence_status' => $attendence_status,
+                'note'=>'4',
+                'evaluation'=>'7'
+            ]);
+        }
+
+        return back();
+    }
+
+    public function storea(Request $request)
+    {
+        $classid = $request->class_id;
+        $teacher = Teacher::findOrFail(auth()->user()->teacher->id);
+        $class = Grade::find($classid);
+
+        if ($teacher->id !== $class->teacher_id) {
+            return redirect()->route('teacher.attendance.createa', $classid)
+                ->with('status', 'You are not assign for this class attendence!');
+        }
+
+        $request->validate([
+            'class_id' => 'required|numeric',
+            'teacher_id' => 'required|numeric',
+            'attendences' => 'required',
+            'evaluation',
+            'note'
+        ]);
+
+        foreach ($request->attendences as $studentid => $attendence) {
+
+            Attendance::createa([
+                'class_id' => $request->class_id,
+                'teacher_id' => $request->teacher_id,
+                'student_id' => $studentid,
+                'evaluation'=>'5',
+                'note'=>'3'
+
             ]);
         }
 
@@ -119,12 +165,12 @@ class AttendanceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Attendance  $attendance
+     * @param \App\Attendance $attendance
      * @return \Illuminate\Http\Response
      */
     public function show(Attendance $attendance)
     {
-        $attendances = Attendance::where('student_id',$attendance->id)->get();
+        $attendances = Attendance::where('student_id', $attendance->id)->get();
 
         return view('backend.attendance.show', compact('attendances'));
     }
@@ -132,7 +178,7 @@ class AttendanceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Attendance  $attendance
+     * @param \App\Attendance $attendance
      * @return \Illuminate\Http\Response
      */
     public function edit(Attendance $attendance)
@@ -143,8 +189,8 @@ class AttendanceController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Attendance  $attendance
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Attendance $attendance
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Attendance $attendance)
@@ -155,7 +201,7 @@ class AttendanceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Attendance  $attendance
+     * @param \App\Attendance $attendance
      * @return \Illuminate\Http\Response
      */
     public function destroy(Attendance $attendance)

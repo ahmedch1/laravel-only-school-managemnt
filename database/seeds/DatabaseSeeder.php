@@ -94,7 +94,8 @@ class DatabaseSeeder extends Seeder
                 'paid'=>'paid',
                 'permanent_address' => 'Dhaka-1215',
                 'created_at'        => date("Y-m-d H:i:s"),
-                'evaluation'=>1
+                'evaluation'=>1,
+                'note'=>'0'
             ]
         ]);
 

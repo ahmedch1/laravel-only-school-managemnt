@@ -20,6 +20,8 @@ class CreateAttendancesTable extends Migration
             $table->unsignedBigInteger('student_id');
             $table->date('attendence_date');
             $table->boolean('attendence_status');
+            $table->string('note');
+            $table->string('evaluation');
             $table->timestamps();
         });
     }
