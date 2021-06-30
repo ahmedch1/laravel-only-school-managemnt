@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\EvaluationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -62,6 +63,11 @@ Route::group(['middleware' => ['auth','role:Admin']], function ()
 
 Route::group(['middleware' => ['auth','role:Teacher']], function ()
 {
+    Route::get('evaluation', 'EvaluationController@index')->name('ev');
+    Route::get('evaluationShow/{student}', [EvaluationController::class, 'show'])->name('evs');
+    Route::get('evaluationEdit/{student}', [EvaluationController::class, 'edit'])->name('eve');
+    Route::put('evaluationUpdate/{student}', [EvaluationController::class, 'update'])->name('evu');
+
     Route::resource('notes','NoteController');
     Route::resource('trims','TrimesterController');
     Route::resource('hebdos','HebdomadaireController');
