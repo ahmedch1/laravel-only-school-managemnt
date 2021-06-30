@@ -102,7 +102,7 @@
             </svg>
             <span class="ml-2 text-sm font-semibold">Rôles &amp; Permissions</span>
         </a>
-        <a href="{{ route('roles-permissions') }}" class="flex items-center text-gray-600 py-2 hover:text-blue-700">
+        <a href="/payment" class="flex items-center text-gray-600 py-2 hover:text-blue-700">
             <svg class="h-4 w-4 fill-current" aria-hidden="true" focusable="false" data-prefix="fas"
                  data-icon="user-cog" class="svg-inline--fa fa-user-cog fa-w-20" role="img"
                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
@@ -111,7 +111,7 @@
             </svg>
             <span class="ml-2 text-sm font-semibold">Gestion des paiements</span>
         </a>
-        <a href="{{ route('roles-permissions') }}" class="flex items-center text-gray-600 py-2 hover:text-blue-700">
+        <a href="/emplois" class="flex items-center text-gray-600 py-2 hover:text-blue-700">
             <svg class="h-4 w-4 fill-current" aria-hidden="true" focusable="false" data-prefix="fas"
                  data-icon="user-cog" class="svg-inline--fa fa-user-cog fa-w-20" role="img"
                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
