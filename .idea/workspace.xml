@@ -20,13 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="959c12f1-e8ec-4f3e-ab3f-be1c49d28230" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/actualite/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/actualite/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/actualite/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/emplois/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/emplois/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/emplois/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/emplois/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/payment/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/payment/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/payment/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/attendance/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/attendance/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,8 +156,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/actualite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/payment" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -165,6 +175,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\payment" />
       <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\actualite" />
     </key>
   </component>
@@ -189,7 +200,13 @@
       <workItem from="1624623718143" duration="4587000" />
       <workItem from="1624655621774" duration="251000" />
       <workItem from="1624701740039" duration="3782000" />
-      <workItem from="1624711230306" duration="10129000" />
+      <workItem from="1624711230306" duration="10583000" />
+      <workItem from="1624734045567" duration="1494000" />
+      <workItem from="1624742526343" duration="145000" />
+      <workItem from="1624901698308" duration="8333000" />
+      <workItem from="1624962796689" duration="4011000" />
+      <workItem from="1624993188579" duration="3860000" />
+      <workItem from="1625002474479" duration="10737000" />
     </task>
     <servers />
   </component>
@@ -206,13 +223,26 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1624725382217">
+    <state x="1032" y="198" key="#Deployment" timestamp="1624734613465">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1032" y="198" key="#Deployment/0.0.1920.1080@0.0.1920.1080" timestamp="1624734613465" />
+    <state x="1023" y="356" key="#com.intellij.ide.util.MemberChooser" timestamp="1624902878124">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1023" y="356" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1624902878124" />
+    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1625005653104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622905848401" />
-    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1624725382217" />
+    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1625005653104" />
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1625002456554">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1625002456554" />
     <state x="749" y="437" key="Github.ShareDialog" timestamp="1622909944439">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -221,19 +251,35 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="593" y="244" key="Github.UntrackedFilesDialog/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622909959454" />
+    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1624902676767">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1624902676767" />
+    <state x="1296" y="438" key="WebDeployment.AddServerDialog.v.1" timestamp="1624734077241">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1296" y="438" key="WebDeployment.AddServerDialog.v.1/0.0.1920.1080@0.0.1920.1080" timestamp="1624734077241" />
     <state x="613" y="312" width="932" height="892" key="dock-window-1" timestamp="1622911143353">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="613" y="312" width="932" height="892" key="dock-window-1/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622911143353" />
-    <state x="1146" y="273" width="701" height="534" key="find.popup" timestamp="1624722031755">
+    <state x="1146" y="273" width="701" height="534" key="find.popup" timestamp="1624994741472">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="783" y="300" width="701" height="624" key="find.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622913669596" />
-    <state x="1146" y="273" width="701" height="534" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1624722031755" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1624728901290">
+    <state x="1146" y="273" width="701" height="534" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1624994741472" />
+    <state x="1316" y="283" key="ftp.server.browser" timestamp="1624734850276">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1316" y="283" key="ftp.server.browser/0.0.1920.1080@0.0.1920.1080" timestamp="1624734850276" />
+    <state x="1095" y="254" key="run.anything.popup" timestamp="1625003555570">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1095" y="254" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625003555570" />
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625014864611">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622912758733" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1624728901290" />
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625014864611" />
   </component>
 </project>

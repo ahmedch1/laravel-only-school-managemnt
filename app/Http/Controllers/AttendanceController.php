@@ -38,10 +38,10 @@ class AttendanceController extends Controller
                 return view('backend.attendance.index', compact('attendances','months'));
 
             }
-            
+
         }
         $attendances = [];
-        
+
         return view('backend.attendance.index', compact('attendances','months'));
     }
 
@@ -52,7 +52,7 @@ class AttendanceController extends Controller
      */
     public function create()
     {
-        
+
     }
 
     public function createByTeacher($classid)
