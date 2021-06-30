@@ -45,6 +45,7 @@ class NoteController extends Controller
             'description' => 'required'
         ]);
         Note::create($request->all());
+        
         return redirect()->route('notes.index')
             ->with('success', 'Note created successfully');
     }

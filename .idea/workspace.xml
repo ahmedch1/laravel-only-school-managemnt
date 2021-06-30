@@ -20,21 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="959c12f1-e8ec-4f3e-ab3f-be1c49d28230" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/NoteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProgrammetrimestrielController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Note.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Programmetrimestriel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_30_111521_create_notes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/notes/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/notes/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/notes/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/notes/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/programmetrimestriel/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Hebdo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HebdomadaireController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TrimesterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Trim.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_30_135825_create_trims_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_30_140045_create_hebdos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Files/ProgramTrim/trimester-1-.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Files/ProgramTrim/trimester-1-1.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NoteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NoteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/parents/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/parents/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/students/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/students/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/teachers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/teachers/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +221,7 @@
       <workItem from="1624962796689" duration="4011000" />
       <workItem from="1624993188579" duration="3860000" />
       <workItem from="1625002474479" duration="14943000" />
-      <workItem from="1625041617601" duration="18566000" />
+      <workItem from="1625041617601" duration="18968000" />
     </task>
     <servers />
   </component>
@@ -251,6 +258,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1625002456554" />
+    <state x="622" y="392" key="FileDocumentManager.FileCacheConflict" timestamp="1625073939833">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="622" y="392" key="FileDocumentManager.FileCacheConflict/0.0.1920.1080@0.0.1920.1080" timestamp="1625073939833" />
     <state x="749" y="437" key="Github.ShareDialog" timestamp="1622909944439">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -259,6 +270,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="593" y="244" key="Github.UntrackedFilesDialog/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622909959454" />
+    <state x="598" y="301" key="MultipleFileMergeDialog" timestamp="1625073899665">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="598" y="301" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1625073899665" />
     <state x="794" y="463" key="NewPhpFileDialog" timestamp="1624902676767">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -284,10 +299,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1095" y="254" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625065512777" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625072276479">
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625073748985">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622912758733" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625072276479" />
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625073748985" />
   </component>
 </project>
