@@ -20,10 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="959c12f1-e8ec-4f3e-ab3f-be1c49d28230" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Hebdo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HebdomadaireController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TrimesterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Trim.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_30_135825_create_trims_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_30_140045_create_hebdos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Files/ProgramTrim/trimester-1-.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Files/ProgramTrim/trimester-1-1.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/hebdos/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/trims/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/payment/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/payment/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/payment/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/payment/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NoteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NoteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/parents/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/parents/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/students/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/students/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/teachers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/teachers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +174,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/payment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -167,6 +186,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projet7899\laravel-only-school-managemnt\app" />
+      <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\students" />
+      <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\attendance" />
       <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\payment" />
       <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\actualite" />
     </key>
@@ -198,7 +220,8 @@
       <workItem from="1624901698308" duration="8333000" />
       <workItem from="1624962796689" duration="4011000" />
       <workItem from="1624993188579" duration="3860000" />
-      <workItem from="1625002474479" duration="12335000" />
+      <workItem from="1625002474479" duration="14943000" />
+      <workItem from="1625041617601" duration="18968000" />
     </task>
     <servers />
   </component>
@@ -226,15 +249,19 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1023" y="356" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1624902878124" />
-    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1625005653104">
+    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1625047845898">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622905848401" />
-    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1625005653104" />
+    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1625047845898" />
     <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1625002456554">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1625002456554" />
+    <state x="622" y="392" key="FileDocumentManager.FileCacheConflict" timestamp="1625073939833">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="622" y="392" key="FileDocumentManager.FileCacheConflict/0.0.1920.1080@0.0.1920.1080" timestamp="1625073939833" />
     <state x="749" y="437" key="Github.ShareDialog" timestamp="1622909944439">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -243,6 +270,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="593" y="244" key="Github.UntrackedFilesDialog/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622909959454" />
+    <state x="598" y="301" key="MultipleFileMergeDialog" timestamp="1625073899665">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="598" y="301" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1625073899665" />
     <state x="794" y="463" key="NewPhpFileDialog" timestamp="1624902676767">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -255,23 +286,23 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="613" y="312" width="932" height="892" key="dock-window-1/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622911143353" />
-    <state x="1146" y="273" width="701" height="534" key="find.popup" timestamp="1624994741472">
+    <state x="1146" y="273" width="701" height="534" key="find.popup" timestamp="1625062300824">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="783" y="300" width="701" height="624" key="find.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622913669596" />
-    <state x="1146" y="273" width="701" height="534" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1624994741472" />
+    <state x="1146" y="273" width="701" height="534" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625062300824" />
     <state x="1316" y="283" key="ftp.server.browser" timestamp="1624734850276">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1316" y="283" key="ftp.server.browser/0.0.1920.1080@0.0.1920.1080" timestamp="1624734850276" />
-    <state x="1095" y="254" key="run.anything.popup" timestamp="1625003555570">
+    <state x="1095" y="254" key="run.anything.popup" timestamp="1625065512777">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1095" y="254" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625003555570" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625016479653">
+    <state x="1095" y="254" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625065512777" />
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625073748985">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622912758733" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625016479653" />
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625073748985" />
   </component>
 </project>

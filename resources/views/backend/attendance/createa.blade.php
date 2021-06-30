@@ -5,7 +5,7 @@
 
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Note et evaluation {{ $class->class_name }}</h2>
+                <h2 class="text-gray-700 uppercase font-bold">Attendance forsss {{ $class->class_name }}</h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('home') }}" class="bg-gray-200 text-gray-700 text-sm uppercase py-2 px-4 flex items-center rounded">
@@ -35,7 +35,7 @@
                     <div class="w-3/12 text-left text-gray-600 py-2 px-4 font-semibold">Evaluation</div>
                     <div class="w-5/12 text-right text-gray-600 py-2 px-4 font-semibold">Présence</div>
                 </div>
-                <form action="{{ route('teacher.attendance.store') }}" method="POST">
+                <form action="{{ route('teacher.attendance.storea') }}" method="POST">
                     @foreach ($class->students as $student)
                         <div class="flex items-center justify-between border border-gray-200">
                             @csrf

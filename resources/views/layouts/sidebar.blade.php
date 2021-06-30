@@ -131,6 +131,7 @@
             </svg>
             <span class="ml-2 text-sm font-semibold">notes</span>
         </a>
+
         <a href="{{ route('trims.index') }}" class="flex items-center text-gray-600 py-2 hover:text-blue-700">
             <svg class="h-4 w-4 fill-current" aria-hidden="true" focusable="false" data-prefix="fas"
                  data-icon="align-right" class="svg-inline--fa fa-align-right fa-w-14" role="img"

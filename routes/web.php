@@ -28,8 +28,7 @@ Route::put('/profile/update', 'HomeController@profileUpdate')->name('profile.upd
 Route::get('/profile/changepassword', 'HomeController@changePasswordForm')->name('profile.change.password');
 Route::post('/profile/changepassword', 'HomeController@changePassword')->name('profile.changepassword');
 
-Route::group(['middleware' => ['auth','role:Admin']], function ()
-{
+Route::group(['middleware' => ['auth', 'role:Admin']], function () {
     Route::get('/roles-permissions', 'RolePermissionController@roles')->name('roles-permissions');
     Route::get('/role-create', 'RolePermissionController@createRole')->name('role.create');
     Route::post('/role-store', 'RolePermissionController@storeRole')->name('role.store');
@@ -47,13 +46,13 @@ Route::group(['middleware' => ['auth','role:Admin']], function ()
     Route::resource('assignrole', 'RoleAssign');
     Route::resource('classes', 'GradeController');
     Route::resource('subject', 'SubjectController');
-    Route::resource('actualite','ActualiteController');
-    Route::resource('payment','PaymentController');
+    Route::resource('actualite', 'ActualiteController');
+    Route::resource('payment', 'PaymentController');
     Route::resource('teacher', 'TeacherController');
     Route::resource('parents', 'ParentsController');
     Route::resource('student', 'StudentController');
 
-    Route::resource('emplois','EmploiController');
+    Route::resource('emplois', 'EmploiController');
     Route::get('attendance', 'AttendanceController@index')->name('attendance.index');
     Route::get('student/contact/{id}', 'StudentController@contact')->name('student.contact');
     Route::get('parents/contact/{id}', 'ParentsController@contact')->name('parent.contact');
@@ -69,18 +68,23 @@ Route::group(['middleware' => ['auth','role:Teacher']], function ()
     Route::put('evaluationUpdate/{student}', [EvaluationController::class, 'update'])->name('evu');
 
     Route::resource('notes','NoteController');
+//ahmed
+    Route::resource('programmetrimestriel','ProgrammetrimestrielController');
+    Route::resource('programmehebdomadaire','ProgrammehebdomadaireController');
+//ahmed
     Route::resource('trims','TrimesterController');
     Route::resource('hebdos','HebdomadaireController');
     Route::post('attendance', 'AttendanceController@store')->name('teacher.attendance.store');
     Route::get('attendance-create/{classid}', 'AttendanceController@createByTeacher')->name('teacher.attendance.create');
-
+    Route::get('attendance-createa/{classid}', 'AttendanceController@createaByTeacher')->name('teacher.attendance.createa');
+    Route::put('/updatea/{id}', 'StudentController@updatea')->name('student.updatea');
+    Route::get('/editea/{id}', 'StudentController@editea')->name('student.editea');
 });
 
-Route::group(['middleware' => ['auth','role:Parent']], function ()
-{
+Route::group(['middleware' => ['auth', 'role:Parent']], function () {
     Route::get('attendance/{attendance}', 'AttendanceController@show')->name('attendance.show');
 });
 
-Route::group(['middleware' => ['auth','role:Student']], function () {
+Route::group(['middleware' => ['auth', 'role:Student']], function () {
 
 });
