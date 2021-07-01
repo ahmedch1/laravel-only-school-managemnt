@@ -5,7 +5,7 @@
 
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Edit Emploi</h2>
+                <h2 class="text-gray-700 uppercase font-bold">Modifier Emploi</h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('emplois.index') }}"
@@ -16,7 +16,7 @@
                         <path fill="currentColor"
                               d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"></path>
                     </svg>
-                    <span class="ml-2 text-xs font-semibold">Back</span>
+                    <span class="ml-2 text-xs font-semibold">Retour</span>
                 </a>
             </div>
         </div>
@@ -79,7 +79,7 @@
                         <button
                             class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                             type="submit">
-                            Update Student
+                            Modifier Emploi
                         </button>
                     </div>
                 </div>

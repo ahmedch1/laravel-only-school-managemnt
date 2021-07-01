@@ -17,7 +17,6 @@
             <div class="flex flex-wrap items-center uppercase text-sm font-semibold bg-gray-300 text-gray-600 rounded-tl rounded-tr">
                 <div class="w-2/12 px-3 py-3">Nom</div>
                 <div class="w-2/12 px-3 py-3">Email</div>
-                <div class="w-2/12 px-3 py-3">Code du Sujet</div>
                 <div class="w-2/12 px-3 py-3">Téléphone</div>
                 <div class="w-2/12 px-3 py-3">Présence</div>
                 <div class="w-2/12 px-3 py-3 text-right">Action</div>
@@ -26,11 +25,6 @@
                 <div class="flex flex-wrap items-center text-gray-700 border-t-2 border-l-4 border-r-4 border-gray-300">
                     <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $teacher->user->name }}</div>
                     <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $teacher->user->email }}</div>
-                    <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">
-                        @foreach ($teacher->subjects as $subject)
-                            <span class="bg-gray-200 text-sm mr-1 mb-1 px-2 border rounded-full">{{ $subject->subject_code }}</span>
-                        @endforeach
-                    </div>
                     <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $teacher->phone }}</div>
                     <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $teacher->presence }}</div>
                     <div class="w-2/12 flex items-center justify-end px-3">
