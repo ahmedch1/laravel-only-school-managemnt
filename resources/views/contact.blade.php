@@ -14,6 +14,10 @@
         @include('backend.contacts.admin')
         @endrole
 
+        @role('Teacher')
+        @include('backend.contacts.teacher')
+        @endrole
+        
     </div>
 
 @endsection

@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::post('contact_admin', [ContactController::class, 'InternauteContact'])->name('contact.admin');
-Route::get('admin_messages', [ContactController::class, 'index'])->name('message.admin');
+Route::get('admin_messages', [ContactController::class, 'Aindex'])->name('message.admin');
 
 Auth::routes();
 
@@ -33,6 +33,15 @@ Route::get('/profile/changepassword', 'HomeController@changePasswordForm')->name
 Route::post('/profile/changepassword', 'HomeController@changePassword')->name('profile.changepassword');
 
 Route::group(['middleware' => ['auth', 'role:Admin']], function () {
+
+    //contact parents
+Route::get('admin_parent', [ContactController::class, 'AdminContactP'])->name('admin.parent');
+Route::post('admin_contact_parent', [ContactController::class, 'AdminContactParent'])->name('admin.contact.parent');
+//contact students
+Route::get('admin_student', [ContactController::class, 'AdminContactS'])->name('admin.student');
+Route::post('admin_contact_student', [ContactController::class, 'AdminContactStudent'])->name('admin.contact.student');
+
+
     Route::get('/roles-permissions', 'RolePermissionController@roles')->name('roles-permissions');
     Route::get('/role-create', 'RolePermissionController@createRole')->name('role.create');
     Route::post('/role-store', 'RolePermissionController@storeRole')->name('role.store');
@@ -84,6 +93,18 @@ Route::group(['middleware' => ['auth','role:Teacher']], function ()
     Route::put('updatea/{id}', 'StudentController@updatea')->name('student.updatea');
     Route::get('editea/{id}', 'StudentController@editea')->name('student.editea');
 // endPart
+
+Route::get('teacher_messages', [ContactController::class, 'Tindex'])->name('message.teacher');
+//contact admin
+Route::get('teacher_admin', [ContactController::class, 'TeacherContactA'])->name('teacher.admin');
+Route::post('teacher_contact_admin', [ContactController::class, 'TeacherContactAdmin'])->name('teacher.contact.admin');
+//contact parents
+Route::get('teacher_parent', [ContactController::class, 'TeacherContactP'])->name('teacher.parent');
+Route::post('teacher_contact_parent', [ContactController::class, 'TeacherContactParent'])->name('teacher.contact.parent');
+//contact students
+Route::get('teacher_student', [ContactController::class, 'TeacherContactS'])->name('teacher.student');
+Route::post('teacher_contact_student', [ContactController::class, 'TeacherContactStudent'])->name('teacher.contact.student');
+
 });
 
 
