@@ -106,7 +106,7 @@ class StudentController extends Controller
 
         $user->assignRole('Student');
 
-        return redirect()->route('student.index');
+        return redirect()->route('students.index');
     }
 
     /**
@@ -227,7 +227,7 @@ class StudentController extends Controller
             'note'=>$request->note
         ]);
 
-        return redirect()->route('student.index');
+        return redirect()->route('students.index');
     }
 
     public function updatea(Request $request, Student $student)
@@ -287,7 +287,7 @@ class StudentController extends Controller
             'note'=>$request->note
         ]);
 
-        return redirect()->route('student.index');
+        return redirect()->route('students.index');
     }
     public function updatenoteevaluation(){
         echo 'test';
