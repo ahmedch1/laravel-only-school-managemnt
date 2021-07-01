@@ -49,7 +49,10 @@
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <span class="text-gray-600 font-bold">{{ $trim->link }} @role('Student') <a href="{{ route('trims.download',$trim->link) }}" class="ml-5 p-2" style="background-color: rgba(12, 250, 12, 0.377); border-radius:6px;"> Telechargé</a> @endrole </span>
+                        <span class="text-gray-600 font-bold">{{ $trim->link }}
+                            @role('Student') <a href="{{ route('trims.download',$trim->link) }}" class="ml-5 p-2" style="background-color: rgba(12, 250, 12, 0.377); border-radius:6px;"> Telechargé</a> @endrole 
+                            @role('Parent') <a href="{{ route('trims.download',$trim->link) }}" class="ml-5 p-2" style="background-color: rgba(12, 250, 12, 0.377); border-radius:6px;"> Telechargé</a> @endrole
+                        </span>
                     </div>
                 </div>
                 <div class="md:flex md:items-center mb-6">

@@ -14,9 +14,9 @@
                 <div class="w-2/12 px-4 py-3">Nom</div>
                 <div class="w-2/12 px-4 py-3">Email</div>
                 <div class="w-2/12 px-4 py-3">Classe</div>
-                <div class="w-2/12 px-4 py-3">Téléphone</div>
                 <div class="w-2/12 px-4 py-3">evaluation </div>
                 <div class="w-2/12 px-4 py-3">note </div>
+                <div class="w-2/12 px-4 py-3">Actions </div>
             </div>
             @foreach ($students as $student)
                 <div class="flex flex-wrap items-center text-gray-700 border-t-2 border-l-4 border-r-4 border-gray-300">
@@ -27,16 +27,15 @@
                     <div
                         class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $student->class->class_name ?? '' }}</div>
                     <div
-                        class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $student->phone }}</div>
-                    <div
-                        class="d-flex flex-row w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight text-center">{{ $student->evaluation }}
+                        class="d-flex flex-row w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $student->evaluation }}
                     </div>
                     <div
-                        class="d-flex flex-row w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight text-center">{{ $student->note }}
+                        class="d-flex flex-row w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $student->note }}
                     </div>
 
-                    <div class="w-2/12 flex items-center justify-end px-3">
-                        <a href="{{ route('evs',$student->id) }}"
+                    <div class="w-2/12 flex items-center justify-start px-3">
+                        @role('Parent')
+                        <a href="{{ route('pevs',$student->id) }}"
                            class="ml-1 bg-gray-600 block p-1 border border-gray-600 rounded-sm" title="Affichage">
                             <svg class="h-3 w-3 fill-current text-gray-100" aria-hidden="true" focusable="false"
                                  data-prefix="far" data-icon="eye" class="svg-inline--fa fa-eye fa-w-18" role="img"
@@ -45,6 +44,17 @@
                                       d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"></path>
                             </svg>
                         </a>
+                        @endrole
+                        @role('Teacher')
+                        <a href="{{ route('evs',$student->id) }}"
+                            class="ml-1 bg-gray-600 block p-1 border border-gray-600 rounded-sm" title="Affichage">
+                             <svg class="h-3 w-3 fill-current text-gray-100" aria-hidden="true" focusable="false"
+                                  data-prefix="far" data-icon="eye" class="svg-inline--fa fa-eye fa-w-18" role="img"
+                                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                 <path fill="currentColor"
+                                       d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"></path>
+                             </svg>
+                         </a>
                         <a href="{{ route('eve',$student->id) }}" class="ml-1">
                             <svg class="h-6 w-6 fill-current text-gray-600" aria-hidden="true" focusable="false"
                                  data-prefix="fas" data-icon="pen-square" class="svg-inline--fa fa-pen-square fa-w-14"
@@ -59,6 +69,7 @@
                             <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                           </svg>
                         </a>
+                        @endrole
                     </div>
                 </div>
                 @endforeach
