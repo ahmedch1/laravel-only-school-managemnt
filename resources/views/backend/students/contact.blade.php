@@ -8,7 +8,7 @@
                 <h2 class="text-gray-700 uppercase font-bold">Détails de l'étudiant</h2>
             </div>
             <div class="flex flex-wrap items-center">
-                <a href="{{ route('student.index') }}"
+                <a href="{{ route('students.index') }}"
                    class="bg-gray-200 text-gray-700 text-sm uppercase py-2 px-4 flex items-center rounded">
                     <svg class="w-3 h-3 fill-current" aria-hidden="true" focusable="false" data-prefix="fas"
                          data-icon="long-arrow-alt-left" class="svg-inline--fa fa-long-arrow-alt-left fa-w-14"

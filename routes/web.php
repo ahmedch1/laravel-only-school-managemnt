@@ -63,11 +63,11 @@ Route::post('admin_contact_student', [ContactController::class, 'AdminContactStu
     Route::resource('payment', 'PaymentController');
     Route::resource('teacher', 'TeacherController');
     Route::resource('parents', 'ParentsController');
-    Route::resource('student', 'StudentController');
+    Route::resource('students', 'StudentController');
 
     Route::resource('emplois', 'EmploiController');
     Route::get('attendance', 'AttendanceController@index')->name('attendance.index');
-    Route::get('student/contact/{id}', 'StudentController@contact')->name('student.contact');
+    Route::get('students/contact/{id}', 'StudentController@contact')->name('students.contact');
     Route::get('parents/contact/{id}', 'ParentsController@contact')->name('parent.contact');
     Route::get('teacher/contact/{id}', 'TeacherController@contact')->name('teacher.contact');
 
@@ -111,7 +111,7 @@ Route::post('teacher_contact_student', [ContactController::class, 'TeacherContac
 //done
 Route::group(['middleware' => ['auth', 'role:Parent']], function () {
     Route::get('attendance/{attendance}', 'AttendanceController@show')->name('attendance.show');
-    
+
     Route::get('pevaluation', 'EvaluationController@index')->name('pev');
     Route::get('pevaluationShow/{student}', [EvaluationController::class, 'show'])->name('pevs');
 
