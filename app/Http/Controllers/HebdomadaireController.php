@@ -65,7 +65,7 @@ class HebdomadaireController extends Controller
         $hebdo->description = $request->input('description');
         if ($request->hasFile('link')) {
             $file = Str::slug($hebdo->name) . '-' . $hebdo->id . '.' . $request->link->getClientOriginalExtension();
-            $request->link->move(public_path('Files/ProgramTrim'), $file);
+            $request->link->move(public_path('Files/ProgramHebdo'), $file);
         } else {
             $file = NULL;
         }
@@ -119,7 +119,7 @@ class HebdomadaireController extends Controller
 
         if ($request->hasFile('link')) {
             $file = Str::slug($hebdo->name) . '-' . $hebdo->id . '.' . $request->link->getClientOriginalExtension();
-            $request->link->move(public_path('Files/ProgramTrim'), $file);
+            $request->link->move(public_path('Files/ProgramHebdo'), $file);
         }
         if($request->hasFile('link')){
             $hebdo->link = $file;
