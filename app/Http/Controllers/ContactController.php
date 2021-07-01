@@ -33,8 +33,23 @@ class ContactController extends Controller
      */
     public function Tindex()
     {
-        $contacts = Tcontact::where("user_id", "=", Auth::id() )->get();
-        return view('contact', compact('contacts'));
+        $contacts = Tcontact::where("user_id", "=", Auth::id())->get();
+        $tcontacts = Pcontact::where("user_id", "=", Auth::id() )->get();
+        return view('contact', compact('contacts', 'tcontacts'));
+    }
+    public function Sindex()
+    {
+        $tcontacts = Tcontact::where("user_id", "=", Auth::id())->get();
+        $contacts = Pcontact::where("user_id", "=", Auth::id() )->get();
+        return view('contact', compact('contacts', 'tcontacts'));
+    }
+
+    public function Pindex()
+    {
+        $tcontacts = Tcontact::where("user_id", "=", Auth::id() )->get();
+        $contacts = Pcontact::where("user_id", "=", Auth::id() )->get();
+
+        return view('contact', compact('contacts', 'tcontacts'));
     }
 
     public function TeacherContactA()
@@ -117,7 +132,7 @@ class ContactController extends Controller
         $msg->message = $request->input('message');
         $msg->save();
 
-        return redirect()->route('teacher.admin')
+        return redirect()->route('teacher.parent')
             ->with('success', 'Your Message sended successfully');
     }
 
@@ -136,7 +151,7 @@ class ContactController extends Controller
         $msg->message = $request->input('message');
         $msg->save();
 
-        return redirect()->route('teacher.admin')
+        return redirect()->route('teacher.student')
             ->with('success', 'Your Message sended successfully');
     }
 
@@ -155,7 +170,7 @@ class ContactController extends Controller
         $msg->message = $request->input('message');
         $msg->save();
 
-        return redirect()->route('teacher.admin')
+        return redirect()->route('admin.parent')
             ->with('success', 'Your Message sended successfully');
     }
 
@@ -174,7 +189,7 @@ class ContactController extends Controller
         $msg->message = $request->input('message');
         $msg->save();
 
-        return redirect()->route('teacher.admin')
+        return redirect()->route('admin.student')
             ->with('success', 'Your Message sended successfully');
     }
 }

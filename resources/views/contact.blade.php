@@ -17,6 +17,14 @@
         @role('Teacher')
         @include('backend.contacts.teacher')
         @endrole
+
+        @role('Parent')
+        @include('backend.contacts.parent')
+        @endrole
+
+        @role('Student')
+        @include('backend.contacts.student')
+        @endrole
         
     </div>
 

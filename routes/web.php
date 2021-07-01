@@ -110,6 +110,11 @@ Route::post('teacher_contact_student', [ContactController::class, 'TeacherContac
 
 //done
 Route::group(['middleware' => ['auth', 'role:Parent']], function () {
+
+    // messages
+    Route::get('parent_messages', [ContactController::class, 'Pindex'])->name('message.parent');
+
+
     Route::get('attendance/{attendance}', 'AttendanceController@show')->name('attendance.show');
 
     Route::get('pevaluation', 'EvaluationController@index')->name('pev');
@@ -130,6 +135,9 @@ Route::group(['middleware' => ['auth', 'role:Parent']], function () {
 
 //done
 Route::group(['middleware' => ['auth', 'role:Student']], function () {
+
+    Route::get('student_messages', [ContactController::class, 'Sindex'])->name('message.student');
+
     Route::get('trimsindexstudent', 'TrimesterController@indexparent')->name('trims.indexstudent');
     Route::get('hebdoindexstudent', 'HebdomadaireController@indexparent')->name('hebdos.indexstudent');
     Route::get('trimsindexstudent/{trim}','TrimesterController@show')->name('trims.show');
