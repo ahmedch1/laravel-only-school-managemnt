@@ -62,6 +62,9 @@ Route::group(['middleware' => ['auth', 'role:Admin']], function () {
 
 Route::group(['middleware' => ['auth','role:Teacher']], function ()
 {
+    Route::resource('Ttrims','TrimesterController');
+    Route::resource('Thebdos','HebdomadaireController');
+
     Route::get('evaluation', 'EvaluationController@index')->name('ev');
     Route::get('evaluationShow/{student}', [EvaluationController::class, 'show'])->name('evs');
     Route::get('evaluationEdit/{student}', [EvaluationController::class, 'edit'])->name('eve');
@@ -69,11 +72,9 @@ Route::group(['middleware' => ['auth','role:Teacher']], function ()
 
     Route::resource('notes','NoteController');
 //ahmed
-    Route::resource('programmetrimestriel','ProgrammetrimestrielController');
-    Route::resource('programmehebdomadaire','ProgrammehebdomadaireController');
+  //  Route::resource('programmetrimestriel','ProgrammetrimestrielController');
+  //  Route::resource('programmehebdomadaire','ProgrammehebdomadaireController');
 //ahmed
-    Route::resource('trims','TrimesterController');
-    Route::resource('hebdos','HebdomadaireController');
     Route::post('attendance', 'AttendanceController@store')->name('teacher.attendance.store');
     Route::get('attendance-create/{classid}', 'AttendanceController@createByTeacher')->name('teacher.attendance.create');
     Route::get('attendance-createa/{classid}', 'AttendanceController@createaByTeacher')->name('teacher.attendance.createa');
@@ -83,16 +84,23 @@ Route::group(['middleware' => ['auth','role:Teacher']], function ()
 
 Route::group(['middleware' => ['auth', 'role:Parent']], function () {
     Route::get('attendance/{attendance}', 'AttendanceController@show')->name('attendance.show');
-    Route::resource('trims','TrimesterController');
-    Route::get('/trimsindexparent', 'TrimesterController@indexparent')->name('trims.indexparent');
-    Route::get('hebdoindexparent', 'HebdomadaireController@indexparent')->name('hebdos.indexparent');
-    Route::resource('hebdos','HebdomadaireController');
+    
+    Route::get('trimsindexparents', 'TrimesterController@indexparent')->name('trim.indexparent');
+    Route::get('hebdoindexparents', 'HebdomadaireController@indexparent')->name('hebdo.indexparent');
+    Route::get('trimsindexparents/{trim}','TrimesterController@show')->name('trim.show');
+    Route::get('hebdoindexparents/{hebdo}','HebdomadaireController@show')->name('hebdo.show');
+
     Route::resource('student','StudentController');
 });
 
 Route::group(['middleware' => ['auth', 'role:Student']], function () {
-    Route::resource('trims','TrimesterController');
-    Route::get('/trimsindexparent', 'TrimesterController@indexparent')->name('trims.indexparent');
+    Route::get('trimsindexparent', 'TrimesterController@indexparent')->name('trims.indexparent');
     Route::get('hebdoindexparent', 'HebdomadaireController@indexparent')->name('hebdos.indexparent');
-    Route::resource('hebdos','HebdomadaireController');
+    Route::get('trimsindexparent/{trim}','TrimesterController@show')->name('trims.show');
+    Route::get('hebdoindexparent/{hebdo}','HebdomadaireController@show')->name('hebdos.show');
+
+    Route::get('trimsindexparent/download/{file}','TrimesterController@download')->name('trims.download');
+    Route::get('hebdoindexparent/download/{file}','HebdomadaireController@download')->name('hebdos.download');
+    Route::get('StudentNotes','NoteController@index')->name('stud.note');
+    Route::get('StudentNotes/{note}','NoteController@show')->name('stud.show');
 });

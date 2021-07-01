@@ -6,6 +6,7 @@
             <div>
                 <h2 class="text-gray-700 uppercase font-bold">Notes</h2>
             </div>
+            @role('Teacher')
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('notes.create') }}"
                    class="bg-gray-200 text-gray-700 text-sm uppercase py-2 px-4 flex items-center rounded">
@@ -18,6 +19,7 @@
                     <span class="ml-2 text-xs font-semibold">Note</span>
                 </a>
             </div>
+            @endrole
         </div>
         <div class="mt-8 bg-white rounded border-b-4 border-gray-300">
             <div
@@ -39,15 +41,25 @@
                     <div
                         class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $note->description }}</div>
                     <div class="w-2/12 flex items-center justify-end px-3">
+                        <a href="{{ route('stud.show',$note->id) }}"
+                            class="ml-1 bg-gray-600 block p-1 border border-gray-600 rounded-sm" title="assign subject">
+                             <svg class="h-3 w-3 fill-current text-gray-100" aria-hidden="true" focusable="false"
+                                  data-prefix="far" data-icon="eye" class="svg-inline--fa fa-eye fa-w-18" role="img"
+                                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                 <path fill="currentColor"
+                                       d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"></path>
+                             </svg>
+                         </a>
+                        @role('Teacher')
                         <a href="{{ route('notes.show',$note->id) }}"
-                           class="ml-1 bg-gray-600 block p-1 border border-gray-600 rounded-sm" title="assign subject">
-                            <svg class="h-3 w-3 fill-current text-gray-100" aria-hidden="true" focusable="false"
-                                 data-prefix="far" data-icon="eye" class="svg-inline--fa fa-eye fa-w-18" role="img"
-                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor"
-                                      d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"></path>
-                            </svg>
-                        </a>
+                            class="ml-1 bg-gray-600 block p-1 border border-gray-600 rounded-sm" title="assign subject">
+                             <svg class="h-3 w-3 fill-current text-gray-100" aria-hidden="true" focusable="false"
+                                  data-prefix="far" data-icon="eye" class="svg-inline--fa fa-eye fa-w-18" role="img"
+                                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                 <path fill="currentColor"
+                                       d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"></path>
+                             </svg>
+                         </a>
                         <a href="{{ route('notes.edit',$note->id) }}" class="ml-1">
                             <svg class="h-6 w-6 fill-current text-gray-600" aria-hidden="true" focusable="false"
                                  data-prefix="fas" data-icon="pen-square" class="svg-inline--fa fa-pen-square fa-w-14"
@@ -66,6 +78,7 @@
                                       d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"></path>
                             </svg>
                         </a>
+                        @endrole
                     </div>
                 </div>
             @endforeach

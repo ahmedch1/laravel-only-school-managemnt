@@ -142,4 +142,9 @@ class TrimesterController extends Controller
         return redirect()->route('trims.index')
             ->with('success', 'Trimester Program deleted successfully');
     }
+
+    public function download($file)
+    {
+        return response()->download('Files/ProgramTrim/'.$file);
+    }
 }

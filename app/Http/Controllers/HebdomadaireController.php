@@ -142,4 +142,9 @@ class HebdomadaireController extends Controller
         return redirect()->route('hebdos.index')
             ->with('success', 'Weekly Program deleted successfully');
     }
+
+    public function download($file)
+    {
+        return response()->download('Files/ProgramHebdo/'.$file);
+    }
 }
