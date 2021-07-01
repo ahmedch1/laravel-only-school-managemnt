@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EvaluationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect('/login');
 });
+
+Route::post('contact_admin', [ContactController::class, 'InternauteContact'])->name('contact.admin');
+Route::get('admin_messages', [ContactController::class, 'index'])->name('message.admin');
 
 Auth::routes();
 

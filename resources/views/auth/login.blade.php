@@ -405,30 +405,34 @@
         }
     </style>
     <div class="fcf-body">
-
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <div id="fcf-form">
             <h3 class="fcf-h3"><strong>Contact Administrateur et demande inscription</strong></h3>
 
-            <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
-
+            <form id="fcf-form-id" class="fcf-form-class" method="post" action="{{route('contact.admin')}}">
+                @csrf
                 <div class="fcf-form-group">
                     <label for="Name" class="fcf-label">Votre nom</label>
                     <div class="fcf-input-group">
-                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                        <input type="text" id="Name" name="name" class="fcf-form-control" required>
                     </div>
                 </div>
 
                 <div class="fcf-form-group">
                     <label for="Email" class="fcf-label">Votre adresse email</label>
                     <div class="fcf-input-group">
-                        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                        <input type="email" id="Email" name="email" class="fcf-form-control" required>
                     </div>
                 </div>
 
                 <div class="fcf-form-group">
                     <label for="Message" class="fcf-label">Votre message</label>
                     <div class="fcf-input-group">
-                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                        <textarea id="Message" name="message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
                     </div>
                 </div>
 
