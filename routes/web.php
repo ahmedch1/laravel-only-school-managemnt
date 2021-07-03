@@ -113,7 +113,8 @@ Route::group(['middleware' => ['auth', 'role:Parent']], function () {
 
     // messages
     Route::get('parent_messages', [ContactController::class, 'Pindex'])->name('message.parent');
-
+    Route::get('parent_admin', [ContactController::class, 'ParentContactA'])->name('parent.admin');
+    Route::post('parent_contact_admin', [ContactController::class, 'ParentContactA'])->name('parent.contact.admin');
 
     Route::get('attendance/{attendance}', 'AttendanceController@show')->name('attendance.show');
 
