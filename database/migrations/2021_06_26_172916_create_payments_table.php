@@ -15,9 +15,10 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->foreignId('user_id')->constrained('users');
             $table->integer('amount');
             $table->string('description');
+            $table->boolean('state');
             $table->timestamps();
         });
     }

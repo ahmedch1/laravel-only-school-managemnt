@@ -13,6 +13,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EvaluationController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -114,6 +115,9 @@ Route::group(['middleware' => ['auth', 'role:Parent']], function () {
     // messages
     Route::get('parent_messages', [ContactController::class, 'Pindex'])->name('message.parent');
 
+    Route::get('payment_process/{payment}', [PaymentController::class, 'Pcheck'])->name('payment.check');
+    Route::get('payment_parent', [PaymentController::class, 'Pindex'])->name('payment.parent');
+    
 
     Route::get('attendance/{attendance}', 'AttendanceController@show')->name('attendance.show');
 

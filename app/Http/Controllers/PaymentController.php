@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Parents;
 use App\Payment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PaymentController extends Controller
 {
@@ -19,6 +21,27 @@ class PaymentController extends Controller
         return view('backend.payment.index', compact('payment'));
     }
 
+/**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function Pindex()
+    {
+        $payments = Payment::where("user_id", "=", Auth::id())->get();
+        return view('backend.payment.index', compact('payments'));
+    }
+
+    public function Pcheck(Payment $payment)
+    {
+        $payment->state = true;
+        $payment->save();
+            
+        return redirect()->route('payment.parent')
+            ->with('success', 'Your Payment proceded successfully');
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -27,7 +50,9 @@ class PaymentController extends Controller
     public function create()
     {
         $payment = Payment::latest()->paginate(10);
-        return view('backend.payment.create', compact('payment'));
+        $parents = Parents::latest()->get();
+
+        return view('backend.payment.create', compact('payment', 'parents'));
     }
 
     /**
@@ -38,7 +63,9 @@ class PaymentController extends Controller
      */
     public function edit(Payment $payment)
     {
-        return view('backend.payment.edit', compact('payment'));
+        $parents = Parents::latest()->get();
+
+        return view('backend.payment.edit', compact('payment', 'parents'));
     }
 
 
@@ -76,16 +103,19 @@ class PaymentController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255|unique:subjects',
-            'description' => 'required|string|max:255',
-            'slug' => 'string'
+            'user_id' => 'required',
+            'amount' => 'required|string|max:255',
+            'description' => 'string'
         ]);
 
-        Payment::create([
-            'name' => $request->name,
-            'description' => $request->description,
-            'amount' => $request->amount
-        ]);
+        $payment = new Payment();
+        $payment->user_id = $request->input('user_id');
+        $payment->amount = $request->input('amount');
+        $payment->description = $request->input('description');
+        $payment->state = false;
+
+        $payment->save();
+
 
         return redirect()->route('payment.index');
     }
