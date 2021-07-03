@@ -198,53 +198,14 @@
             <label for="slide4"></label>
         </div>
     </div>
-    <div class="w-full max-w-xs mx-auto">
-        <form method="POST" action="{{ route('login') }}" class="bg-white shadow rounded px-8 pt-6 pb-8 mb-4">
-            @csrf
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="emailaddress">
-                    Adresse Email
-                </label>
-                <input
-                    class="shadow appearance-none border @error('password') border-red-500 @enderror rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                    type="email" name="email" id="emailaddress" placeholder="email@example.com">
-                @error('email')
-                <p class="text-red-500 text-xs italic">{{ $message }}</p>
-                @enderror
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                    Mot de Passe
-                </label>
-                <input
-                    class="shadow appearance-none border @error('password') border-red-500 @enderror rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                    type="password" name="password" id="password" placeholder="******************">
-                @error('password')
-                <p class="text-red-500 text-xs italic">{{ $message }}</p>
-                @enderror
-            </div>
-            <div class="mb-6">
-                <label class="block text-gray-500 font-bold">
-                    <input class="mr-2 leading-tight" type="checkbox"
-                           name="remember" {{ old('remember') ? 'checked' : '' }}>
-                    <span class="text-sm">
-                    Rappelez-moi
-                </span>
-                </label>
-            </div>
-            <div class="flex items-center justify-between">
-                <button
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                    type="submit">
-                    Connexion
-                </button>
-            </div>
-        </form>
-    </div>
-
+    <center>
+        <h2><strong>Notre Ecole est votre guide vers l'excellence</strong></h2>
+        <h3><strong>Adresse: Tunisie </strong></h3>
+        <h4><strong>Tel : 71 000 000</strong></h4>
+    </center>
     <style>
         #fcf-form {
-            display:block;
+            display: block;
         }
 
         .fcf-body {
@@ -384,7 +345,7 @@
             box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
         }
 
-        .fcf-btn-lg, .fcf-btn-group-lg>.fcf-btn {
+        .fcf-btn-lg, .fcf-btn-group-lg > .fcf-btn {
             padding: 0.5rem 1rem;
             font-size: 1.25rem;
             line-height: 1.5;
@@ -396,7 +357,7 @@
             width: 100%;
         }
 
-        .fcf-btn-block+.fcf-btn-block {
+        .fcf-btn-block + .fcf-btn-block {
             margin-top: 0.5rem;
         }
 
@@ -404,46 +365,123 @@
             width: 100%;
         }
     </style>
-    <div class="fcf-body">
-        @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column1 {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row1:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+
+    <div class="row1">
+        <div class="column1" style="background-color:#aaa;">
+            <div>
+                <form method="POST" action="{{ route('login') }}" class="bg-white shadow rounded px-8 pt-6 pb-8 mb-4">
+                    @csrf
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="emailaddress">
+                            Adresse Email
+                        </label>
+                        <input
+                            class="shadow appearance-none border @error('password') border-red-500 @enderror rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            type="email" name="email" id="emailaddress" placeholder="email@example.com">
+                        @error('email')
+                        <p class="text-red-500 text-xs italic">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                            Mot de Passe
+                        </label>
+                        <input
+                            class="shadow appearance-none border @error('password') border-red-500 @enderror rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            type="password" name="password" id="password" placeholder="******************">
+                        @error('password')
+                        <p class="text-red-500 text-xs italic">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-500 font-bold">
+                            <input class="mr-2 leading-tight" type="checkbox"
+                                   name="remember" {{ old('remember') ? 'checked' : '' }}>
+                            <span class="text-sm">
+                    Rappelez-moi
+                </span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button
+                            class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="submit">
+                            Connexion
+                        </button>
+                    </div>
+                </form>
             </div>
-        @endif
-        <div id="fcf-form">
-            <h3 class="fcf-h3"><strong>Contact Administrateur et demande inscription</strong></h3>
 
-            <form id="fcf-form-id" class="fcf-form-class" method="post" action="{{route('contact.admin')}}">
-                @csrf
-                <div class="fcf-form-group">
-                    <label for="Name" class="fcf-label">Votre nom</label>
-                    <div class="fcf-input-group">
-                        <input type="text" id="Name" name="name" class="fcf-form-control" required>
-                    </div>
-                </div>
-
-                <div class="fcf-form-group">
-                    <label for="Email" class="fcf-label">Votre adresse email</label>
-                    <div class="fcf-input-group">
-                        <input type="email" id="Email" name="email" class="fcf-form-control" required>
-                    </div>
-                </div>
-
-                <div class="fcf-form-group">
-                    <label for="Message" class="fcf-label">Votre message</label>
-                    <div class="fcf-input-group">
-                        <textarea id="Message" name="message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
-                    </div>
-                </div>
-
-                <div class="fcf-form-group">
-                    <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Envoyer Message</button>
-                </div>
-
-
-            </form>
         </div>
+        <div class="column1" style="background-color:#bbb;">
+            <div class="fcf-body">
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                <div id="fcf-form">
+                    <h3 class="fcf-h3"><strong>Contact Administrateur et demande inscription</strong></h3>
 
+                    <form id="fcf-form-id" class="fcf-form-class" method="post" action="{{route('contact.admin')}}">
+                        @csrf
+                        <div class="fcf-form-group">
+                            <label for="Name" class="fcf-label">Votre nom</label>
+                            <div class="fcf-input-group">
+                                <input type="text" id="Name" name="name" class="fcf-form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="fcf-form-group">
+                            <label for="Email" class="fcf-label">Votre adresse email</label>
+                            <div class="fcf-input-group">
+                                <input type="email" id="Email" name="email" class="fcf-form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="fcf-form-group">
+                            <label for="Message" class="fcf-label">Votre message</label>
+                            <div class="fcf-input-group">
+                        <textarea id="Message" name="message" class="fcf-form-control" rows="6" maxlength="3000"
+                                  required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="fcf-form-group">
+                            <button type="submit" id="fcf-button"
+                                    class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">
+                                Envoyer Message
+                            </button>
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
 @endsection

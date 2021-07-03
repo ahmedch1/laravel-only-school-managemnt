@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="959c12f1-e8ec-4f3e-ab3f-be1c49d28230" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +166,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projet7899\laravel-only-school-managemnt\public\images\profile" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\students" />
       <recent name="D:\projet7899\laravel-only-school-managemnt\resources\views\backend\hebdos" />
@@ -201,6 +207,8 @@
       <workItem from="1625002474479" duration="14943000" />
       <workItem from="1625041617601" duration="19620000" />
       <workItem from="1625074644367" duration="9746000" />
+      <workItem from="1625155194789" duration="5848000" />
+      <workItem from="1625326825548" duration="5776000" />
     </task>
     <servers />
   </component>
@@ -265,11 +273,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="613" y="312" width="932" height="892" key="dock-window-1/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622911143353" />
-    <state x="1146" y="273" width="701" height="534" key="find.popup" timestamp="1625089960989">
+    <state x="1146" y="273" width="701" height="534" key="find.popup" timestamp="1625339256263">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="783" y="300" width="701" height="624" key="find.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622913669596" />
-    <state x="1146" y="273" width="701" height="534" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625089960989" />
+    <state x="1146" y="273" width="701" height="534" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625339256263" />
     <state x="1316" y="283" key="ftp.server.browser" timestamp="1624734850276">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -278,10 +286,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1095" y="254" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625065512777" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625135908029">
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1625158533988">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1622912758733" />
-    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625135908029" />
+    <state x="1103" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1625158533988" />
   </component>
 </project>
