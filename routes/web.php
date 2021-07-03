@@ -119,7 +119,10 @@ Route::group(['middleware' => ['auth', 'role:Parent']], function () {
     Route::get('payment_parent', [PaymentController::class, 'Pindex'])->name('payment.parent');
     
     Route::get('parent_admin', [ContactController::class, 'ParentContactA'])->name('parent.admin');
-    Route::post('parent_contact_admin', [ContactController::class, 'ParentContactA'])->name('parent.contact.admin');
+    Route::post('parent_contact_admin', [ContactController::class, 'ParentContactAd'])->name('parent.contact.admin');
+
+    Route::get('parent_teacher', [ContactController::class, 'ParentContactT'])->name('parent.teacher');
+    Route::post('parent_contact_teacher', [ContactController::class, 'ParentContactTe'])->name('parent.contact.teacher');
 
     Route::get('attendance/{attendance}', 'AttendanceController@show')->name('attendance.show');
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+use App\Pacontact;
 use App\Parents;
 use App\Pcontact;
 use App\Student;
@@ -22,8 +23,8 @@ class ContactController extends Controller
     {
         $contacts = Contact::latest()->paginate(5);
         $tcontacts = Tcontact::where("user_id", "=", Auth::id())->get();
-        //$pcontacts = Tcontact::where("user_id", "=", Auth::id())->get();
-        return view('contact', compact('contacts', 'tcontacts'));
+        $pacontacts = Pacontact::where("user_id", "=", Auth::id())->get();
+        return view('contact', compact('contacts', 'tcontacts','pacontacts'));
     }
 
     /**
@@ -33,9 +34,8 @@ class ContactController extends Controller
      */
     public function Tindex()
     {
-        $contacts = Tcontact::where("user_id", "=", Auth::id())->get();
-        $tcontacts = Pcontact::where("user_id", "=", Auth::id() )->get();
-        return view('contact', compact('contacts', 'tcontacts'));
+        $pcontacts = Pacontact::where("user_id", "=", Auth::id())->get();
+        return view('contact', compact('pcontacts'));
     }
     public function Sindex()
     {
@@ -55,6 +55,50 @@ class ContactController extends Controller
     public function ParentContactA()
     {
         return view('backend.contacts.parent.admin');
+    }
+
+    public function ParentContactAd(Request $request)
+    {
+        $request->validate([
+            'subject' => 'required',
+            'message' => 'required'
+        ]);
+        $currentUser = Auth::user();
+
+        $msg = new Pacontact();
+        $msg->user_id = 1;
+        $msg->subject = "De Parent ". $currentUser->name .": ". $request->input('subject');
+        $msg->message = $request->input('message');
+        $msg->save();
+
+        return redirect()->route('parent.admin')
+            ->with('success', 'Your Message sended successfully');
+    }
+
+    public function ParentContactT()
+    {
+        $teachers = Teacher::latest()->get();
+        return view('backend.contacts.parent.teacher', compact('teachers'));
+    }
+
+    public function ParentContactTe(Request $request)
+    {
+        $request->validate([
+            'user_id' => 'required',
+            'subject' => 'required',
+            'message' => 'required'
+        ]);
+        $currentUser = Auth::user();
+
+        $msg = new Pacontact();
+        $msg->user_id = $request->input('user_id');
+        $msg->subject = "De Parent ". $currentUser->name .": ". $request->input('subject');
+        $msg->message = $request->input('message');
+        $msg->save();
+
+        return redirect()->route('parent.teacher')
+            ->with('success', 'Your Message sended successfully');
+
     }
 
 
