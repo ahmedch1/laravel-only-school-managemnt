@@ -51,6 +51,12 @@ class ContactController extends Controller
 
         return view('contact', compact('contacts', 'tcontacts'));
     }
+    //parent contact
+    public function ParentContactA()
+    {
+        return view('backend.contacts.parent.admin');
+    }
+
 
     public function TeacherContactA()
     {
@@ -64,7 +70,7 @@ class ContactController extends Controller
     }
     public function TeacherContactS()
     {
-        
+
         $students = Student::latest()->get();
 
         return view('backend.contacts.teacher.student', compact('students'));
@@ -77,7 +83,7 @@ class ContactController extends Controller
     }
     public function AdminContactS()
     {
-        
+
         $students = Student::latest()->get();
 
         return view('backend.contacts.admin.student', compact('students'));
@@ -92,7 +98,7 @@ class ContactController extends Controller
             'message' => 'required'
         ]);
         Contact::create($request->all());
-        
+
         return redirect()->route('login')
             ->with('success', 'Your Message sended successfully');
     }
@@ -106,7 +112,7 @@ class ContactController extends Controller
             'message' => 'required'
         ]);
         $currentUser = Auth::user();
-        
+
         $msg = new Tcontact();
         $msg->user_id = 1;
         $msg->subject = "De l'enseignant ". $currentUser->name .": ". $request->input('subject');
@@ -125,7 +131,7 @@ class ContactController extends Controller
             'message' => 'required'
         ]);
         $currentUser = Auth::user();
-        
+
         $msg = new Tcontact();
         $msg->user_id = $request->input('user_id');
         $msg->subject = "De l'enseignant ". $currentUser->name .": ". $request->input('subject');
@@ -144,7 +150,7 @@ class ContactController extends Controller
             'message' => 'required'
         ]);
         $currentUser = Auth::user();
-        
+
         $msg = new Tcontact();
         $msg->user_id = $request->input('user_id');
         $msg->subject = "De l'enseignant ". $currentUser->name .": ". $request->input('subject');
@@ -163,7 +169,7 @@ class ContactController extends Controller
             'message' => 'required'
         ]);
         $currentUser = Auth::user();
-        
+
         $msg = new Pcontact();
         $msg->user_id = $request->input('user_id');
         $msg->subject = "De l'administration ". $currentUser->name .": ". $request->input('subject');
@@ -182,7 +188,7 @@ class ContactController extends Controller
             'message' => 'required'
         ]);
         $currentUser = Auth::user();
-        
+
         $msg = new Pcontact();
         $msg->user_id = $request->input('user_id');
         $msg->subject = "De l'administration ". $currentUser->name .": ". $request->input('subject');

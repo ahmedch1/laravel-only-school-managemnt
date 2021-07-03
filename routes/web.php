@@ -111,13 +111,15 @@ Route::post('teacher_contact_student', [ContactController::class, 'TeacherContac
 
 //done
 Route::group(['middleware' => ['auth', 'role:Parent']], function () {
-
+ 
     // messages
     Route::get('parent_messages', [ContactController::class, 'Pindex'])->name('message.parent');
 
     Route::get('payment_process/{payment}', [PaymentController::class, 'Pcheck'])->name('payment.check');
     Route::get('payment_parent', [PaymentController::class, 'Pindex'])->name('payment.parent');
     
+    Route::get('parent_admin', [ContactController::class, 'ParentContactA'])->name('parent.admin');
+    Route::post('parent_contact_admin', [ContactController::class, 'ParentContactA'])->name('parent.contact.admin');
 
     Route::get('attendance/{attendance}', 'AttendanceController@show')->name('attendance.show');
 
