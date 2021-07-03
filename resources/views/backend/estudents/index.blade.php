@@ -15,7 +15,6 @@
                 <div class="w-2/12 px-4 py-3">Email</div>
                 <div class="w-2/12 px-4 py-3">Classe</div>
                 <div class="w-2/12 px-4 py-3">evaluation </div>
-                <div class="w-2/12 px-4 py-3">note </div>
                 <div class="w-2/12 px-4 py-3">Actions </div>
             </div>
             @foreach ($students as $student)
@@ -29,9 +28,7 @@
                     <div
                         class="d-flex flex-row w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $student->evaluation }}
                     </div>
-                    <div
-                        class="d-flex flex-row w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $student->note }}
-                    </div>
+                    
 
                     <div class="w-2/12 flex items-center justify-start px-3">
                         @role('Parent')
