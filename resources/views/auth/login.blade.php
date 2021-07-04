@@ -198,11 +198,7 @@
             <label for="slide4"></label>
         </div>
     </div>
-    <center>
-        <h2><strong>Notre Ecole est votre guide vers l'excellence</strong></h2>
-        <h3><strong>Adresse: Tunisie </strong></h3>
-        <h4><strong>Tel : 71 000 000</strong></h4>
-    </center>
+
     <style>
         #fcf-form {
             display: block;
@@ -387,17 +383,17 @@
     </style>
 
 
-    <div class="row1">
-        <div class="column1" style="background-color:#aaa;">
-            <div>
-                <form method="POST" action="{{ route('login') }}" class="bg-white shadow rounded px-8 pt-6 pb-8 mb-4">
+    
+        
+            <div class="w-6/12 mt-12" style="margin-left: 30% ">
+                <form method="POST" action="{{ route('login') }}" class="rounded-lg shadow-lg px-8 pt-6 pb-8 mb-4">
                     @csrf
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="emailaddress">
                             Adresse Email
                         </label>
                         <input
-                            class="shadow appearance-none border @error('password') border-red-500 @enderror rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            class=" @error('password') border-red-500 @enderror w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                             type="email" name="email" id="emailaddress" placeholder="email@example.com">
                         @error('email')
                         <p class="text-red-500 text-xs italic">{{ $message }}</p>
@@ -408,7 +404,7 @@
                             Mot de Passe
                         </label>
                         <input
-                            class="shadow appearance-none border @error('password') border-red-500 @enderror rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            class=" @error('password') border-red-500 @enderror w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                             type="password" name="password" id="password" placeholder="******************">
                         @error('password')
                         <p class="text-red-500 text-xs italic">{{ $message }}</p>
@@ -432,7 +428,7 @@
                     </div>
                 </form>
             </div>
-
+{{-- <div class="row1">
         </div>
         <div class="column1" style="background-color:#bbb;">
             <div class="fcf-body">
@@ -482,6 +478,59 @@
             </div>
 
         </div>
-    </div>
+    </div> --}}
+        
+           <div class="max-w-screen-xl mt-12 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
+            @if(session('success'))
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert" id="tt">
+                    <strong class="font-bold">{{ session('success') }}</strong>
+                        <span class="absolute top-0 bottom-0 right-0 px-4 py-3" onclick="document.getElementById('tt').style.display = 'none';">
+                        <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                    </span>
+                </div>
+            @endif
+                <div class="flex flex-row justify-between ">
+                 <div class="w-6/12 mr-12" style="margin-ledt:25%; ">
+                   
+                   @include('dashboard.contact')
+                 </div>
+                
+                 <div class="w-6/12">
+                    <form method="post" action="{{route('contact.admin')}}">
+                        @csrf
+                   <div>
+                     <span class="uppercase text-sm text-gray-600 font-bold">Nom Complet</span>
+                     <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                       type="text" placeholder="" id="Name" name="name">
+                   </div>
+                   <div class="mt-8">
+                     <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
+                     <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                       type="text" id="Email" name="email">
+                   </div>
+                   <div class="mt-8">
+                     <span class="uppercase text-sm text-gray-600 font-bold">Description</span>
+                     <textarea
+                       class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" id="Message" name="message"></textarea>
+                   </div>
+                   <div class="mt-8">
+                     <button
+                       class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                       Send Message
+                     </button>
+                   </div>
+                </form>
+                 </div>
+               </div>
+         </div>  
 
+         <div class="container mx-auto px-6" >
+            <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center bottom">
+                <div class="sm:w-2/3 text-center py-6">
+                    <h2><strong class="text-sm text-blue-700 font-bold">Notre Ecole est votre guide vers l'excellence</strong></h2>
+                    <h3><strong class="text-sm text-blue-700 font-bold">Adresse: Tunisie </strong></h3>
+                    <h4><strong class="text-sm text-blue-700 font-bold">Tel : 71 000 000</strong></h4>
+                </div>
+            </div>
+        </div>
 @endsection
