@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Note;
+use App\Parents;
+use App\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class NoteController extends Controller
 {
@@ -15,7 +18,8 @@ class NoteController extends Controller
     public function index()
     {
         $notes = Note::latest()->paginate(5);
-        return view('backend.notes.index', compact('notes'));
+        $student = Student::where('parent_id' , '=', Auth::id())->get();
+        return view('backend.notes.index', compact('notes', 'student'));
 
         //
     }
@@ -27,7 +31,8 @@ class NoteController extends Controller
      */
     public function create()
     {
-        return view('backend.notes.create');
+        $students = Student::latest()->get();
+        return view('backend.notes.create', compact('students'));
     }
 
     /**
@@ -40,7 +45,7 @@ class NoteController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'name' => 'required',
+            'user_id' => 'required',
             'rate' => 'required',
             'description' => 'required'
         ]);
@@ -83,7 +88,7 @@ class NoteController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'name' => 'required',
+            'user_id' => 'required',
             'rate' => 'required',
             'description' => 'required'
         ]);

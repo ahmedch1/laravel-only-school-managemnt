@@ -31,15 +31,32 @@
                 <div class="w-2/12 px-4 py-3 text-right">Action</div>
             </div>
             @foreach ($notes as $note)
+            @role('Teacher')
                 <div class="flex flex-wrap items-center text-gray-700 border-t-2 border-l-4 border-r-4 border-gray-300">
                     <div
                         class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $note->title }}</div>
                     <div
-                        class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $note->name }}</div>
+                        class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $note->user->name }}</div>
                     <div
                         class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $note->rate }}</div>
                     <div
                         class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $note->description }}</div>
+            @endrole
+            @role('Parent')
+                @if( Auth::id() == $student->)
+                <div class="flex flex-wrap items-center text-gray-700 border-t-2 border-l-4 border-r-4 border-gray-300">
+                    <div
+                        class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $note->title }}</div>
+                    <div
+                        class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $note->user->name }}</div>
+                    <div
+                        class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $note->rate }}</div>
+                    <div
+                        class="w-2/12 px-3 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $note->description }}</div>
+                @else
+                <p>y ou havent kids</p>
+                @endif
+            @endrole
                     <div class="w-2/12 flex items-center justify-end px-3">
                         @role('Student')
                         <a href="{{ route('stud.show',$note->id) }}"
