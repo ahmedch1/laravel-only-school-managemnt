@@ -18,8 +18,12 @@ class NoteController extends Controller
     public function index()
     {
         $notes = Note::latest()->paginate(5);
-        $student = Student::where('parent_id' , '=', Auth::id())->get();
-        return view('backend.notes.index', compact('notes', 'student'));
+        $student = null;
+        if(Auth::user()->parent) {
+            $student = Student::where('parent_id', Auth::user()->parent->id)->first();
+        }
+        
+        return view('backend.notes.index', compact('notes','student'));
 
         //
     }

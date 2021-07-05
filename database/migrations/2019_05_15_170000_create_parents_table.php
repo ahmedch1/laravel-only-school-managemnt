@@ -15,7 +15,7 @@ class CreateParentsTable extends Migration
     {
         Schema::create('parents', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
+            $table->foreignId('user_id')->constrained('users');
             $table->enum('gender', ['male', 'female']);
             $table->string('phone');
             $table->string('current_address');
