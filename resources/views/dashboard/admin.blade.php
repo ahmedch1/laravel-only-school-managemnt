@@ -15,7 +15,7 @@
         <div class="w-full bg-gray-200 text-center border border-gray-300 px-8 py-6 rounded">
             <h3 class="text-gray-700 uppercase font-bold">
                 <span class="text-4xl">{{ sprintf("%02d", count($students)) }}</span>
-                <span class="leading-tight">Eleves</span>
+                <span class="leading-tight">Elèves</span>
             </h3>
         </div>
     </div>

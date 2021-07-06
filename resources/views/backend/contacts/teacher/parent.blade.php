@@ -5,7 +5,7 @@
 
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Créer un Classe</h2>
+                <h2 class="text-gray-700 uppercase font-bold">Contacter Parent</h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('message.teacher') }}" class="bg-gray-200 text-gray-700 text-sm uppercase py-2 px-4 flex items-center rounded">
@@ -29,7 +29,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Attribuer un enseignant
+                            Attribuer un parent
                         </label>
                     </div>
                     <div class="md:w-2/3 block text-gray-600 font-bold">

@@ -5,7 +5,7 @@
 
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Détails de l'étudiant</h2>
+                <h2 class="text-gray-700 uppercase font-bold">Détails de l'élève</h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('student.index') }}"

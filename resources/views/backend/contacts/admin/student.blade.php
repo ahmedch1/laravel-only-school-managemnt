@@ -5,7 +5,7 @@
 
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Créer un Classe</h2>
+                <h2 class="text-gray-700 uppercase font-bold">Contacer une élève</h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('message.admin') }}" class="bg-gray-200 text-gray-700 text-sm uppercase py-2 px-4 flex items-center rounded">
@@ -29,13 +29,13 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Attribuer un enseignant
+                            Attribuer une élève
                         </label>
                     </div>
                     <div class="md:w-2/3 block text-gray-600 font-bold">
                         <div class="relative">
                             <select name="user_id" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                                <option value="">--Choisir un éleve à Contacter--</option>
+                                <option value="">--Choisir une élève à Contacter--</option>
                                 @foreach ($students as $student)
                                     <option value="{{ $student->user->id }}">{{ $student->user->name }}</option>
                                 @endforeach

@@ -78,7 +78,8 @@ class NoteController extends Controller
      */
     public function edit(Note $note)
     {
-        return view('backend.notes.edit', compact('note'));
+        $students = Student::latest()->get();
+        return view('backend.notes.edit', compact('note','students'));
     }
 
     /**

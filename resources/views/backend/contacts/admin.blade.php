@@ -74,7 +74,7 @@
         <div class="w-full sm:max-w-sm bg-gray-200 text-center border border-gray-300 rounded px-8 py-6 my-4 sm:my-0">
             <h3 class="text-gray-700 uppercase font-bold">
                 <span class="text-4xl">{{ sprintf("%02d", $pacontacts->count()) }}</span>
-                <span class="leading-tight">Messages de L'internaute</span>
+                <span class="leading-tight">Messages de Parents</span>
             </h3>
         </div>
     </div>
@@ -99,4 +99,4 @@
             </div>
         @endforeach  
     </div>
-</div> <!-- ./END INTERNAUTE -->
+</div> <!-- ./END PARENTS -->

@@ -28,7 +28,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Nom du Actualite
+                            Nom d'actualité
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -43,7 +43,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Code du Actualite
+                            Code d'actualité
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -58,7 +58,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Description du Actualite
+                            Description d'actualité
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -77,7 +77,7 @@
                         <button
                             class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                             type="submit">
-                            Modifier Actualite
+                            Modifier Actualité
                         </button>
                     </div>
                 </div>

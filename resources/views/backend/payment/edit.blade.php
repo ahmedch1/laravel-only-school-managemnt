@@ -5,7 +5,7 @@
 
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Edit Payment</h2>
+                <h2 class="text-gray-700 uppercase font-bold">Editer un Payment</h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('payment.index') }}"
