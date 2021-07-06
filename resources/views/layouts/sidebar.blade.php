@@ -103,7 +103,7 @@
                 <path fill="currentColor"
                       d="M160 84V44c0-8.837 7.163-16 16-16h256c8.837 0 16 7.163 16 16v40c0 8.837-7.163 16-16 16H176c-8.837 0-16-7.163-16-16zM16 228h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 256h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm160-128h256c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H176c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
             </svg>
-            <span class="ml-2 text-sm font-semibold">notes</span>
+            <span class="ml-2 text-sm font-semibold">Notes</span>
         </a>
 
         <a href="{{ route('trims.index') }}" class="flex items-center text-gray-600 py-2 hover:text-blue-700">
